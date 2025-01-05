@@ -78,11 +78,13 @@
 ---
 
 ### 🧰 Tools I Use:
-- **Languages:** Python, Java, SQL, PowerShell  
-- **Databases:** PostgreSQL, MS SQL, MySQL, Snowflake  
-- **Frameworks:** Flask, FastAPI, Spring Boot  
-- **DevOps Tools:** Docker, Kubernetes, Git, CI/CD  
-- **Cloud:** AWS, GCP, Azure  
+- **Languages:** Python, Java, C++, SQL, Bash  
+- **Databases:** MySQL, PostgreSQL, Snowflake
+- **Big Data Frameworks:** Apache Spark, PySpark, Hadoop, Kafka, Spring Boot, Flask
+- **Visualization:** Tableau,PowerBI, Matplotlib, Seaborn, Plotly
+- **Tools & Platforms:** Git, GitHub, Docker, Kubernetes, Airflow, Streamlit
+- **Cloud:** AWS (EC2, S3, Lambda, Glue, Redshift), Microsoft Azure(Data Factory, Synapse, Blob storage), GCP
+- ** Data Science & ML:** MLflow, SageMaker, Natural Language Processing(Spacy, NLTK), Hugging Face, Large Language Models(LLMS), RAG 
 - **OS:** Linux, Windows, UNIX  
 
 ---
