@@ -34,14 +34,15 @@
 - 🔗 **[Medi Text Summarizer](https://github.com/SATHEESH-MEADI/Medical-Text-Analysis-System.git)**  
   *Automated medical document data pipelines with Python, SQL, and cloud integration, achieving 92% accuracy in extraction.*  
 
-- 🔗 **[Corporate Training Hub](https://github.com/SATHEESH-MEADI/Corporate-Training-Knowledge-Hub.git)**  
-  *Built SQL-driven ETL workflows to streamline reporting pipelines, improving data validation by 95%.*  
+- 🔗 **[Financial Risk Analysis](https://github.com/SATHEESH-MEADI/Real_Time_Financial_Risk_Dashboard.git)**  
+  *Developed a financial risk analysis model using Python and SQL, performing risk forecasting and data visualization to support investment decisions.*  
 
 - 🔗 **[NBA Data Pipelines](https://github.com/SATHEESH-MEADI/NBA-Game-Forecast.git)**  
   *Real-time ETL pipelines using SQL, Kafka, and PySpark to process 10,000+ records for sports analytics.*  
 
-- 🔗 **[Financial Risk Analysis](https://github.com/SATHEESH-MEADI/Real_Time_Financial_Risk_Dashboard.git)**  
-  *Developed a financial risk analysis model using Python and SQL, performing risk forecasting and data visualization to support investment decisions.*  
+
+- 🔗 **[Corporate Training Hub](https://github.com/SATHEESH-MEADI/Corporate-Training-Knowledge-Hub.git)**  
+  *Built SQL-driven ETL workflows to streamline reporting pipelines, improving data validation by 95%.*  
 
 ---
 ### 🚀 GitHub Stats:
