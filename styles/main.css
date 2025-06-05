@@ -7,6 +7,10 @@
     --secondary-bg: #E5E5E7;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -118,7 +122,7 @@ header {
     align-items: center;
     text-align: left;
     padding: 100px 5%;
-    background: linear-gradient(to right, var(--background-color), var(--secondary-bg));
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../images/background1.jpeg') center/cover no-repeat;
     min-height: 100vh;
 }
 
@@ -130,13 +134,14 @@ header {
 .hero h2 {
     font-size: 3rem;
     margin-bottom: 5px; /* Reduced space below */
+    color: white;
 }
 
 /* Quote Styling */
 .quote {
     font-size: 1.2rem;
     font-style: italic;
-    color: #555;
+    color: #f5f5f5;
     margin-top: 0px; /* Removes extra space above */
     margin-bottom: 5px; /* Reduces space below */
     opacity: 0.8;
@@ -147,7 +152,7 @@ header {
 .text-animate {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #1D1D1F;
+    color: white;
     margin-top: 0px; /* Reducing space between quote and this text */
     line-height: 1.2;
 }
@@ -226,6 +231,40 @@ section {
     padding-bottom: 150px; /* Ensure spacing */
 }
 
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background: var(--accent-color);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #005bb5;
+}
+
+.contact-links {
+    margin-top: 20px;
+}
+
 /* Footer */
 footer {
     padding: 20px;
@@ -284,6 +323,10 @@ footer {
 
 .education-item {
     margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 
@@ -352,4 +395,23 @@ footer {
     margin-top: 10px;
     font-size: 1rem;
     color: var(--text-color);
+}
+
+#scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    z-index: 200;
+}
+
+#scroll-top.show {
+    display: block;
 }
