@@ -13,6 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
         section.style.transform = "translateY(30px)";
         observer.observe(section);
     });
+
+    const toggle = document.querySelector('.dark-mode-toggle');
+    if (toggle) {
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    }
 });
 
 
