@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?lines=Hi!+I'm+Satheesh+Meadi.;Data+Engineering:+Beyond+the+Ordinary.;Automation+for+the+Curious+and+Bold...;Wanderlust..;+Learning+Never+Stops!..." alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com/?lines=Hi!+I'm+Satheesh+Meadi.;Data+Engineering:+Beyond+the+Ordinary...;Automation+for+the+Curious+and+Bold...;Wanderlust..;+Learning+Never+Stops!..." alt="Typing SVG" />
 </p>
 
 
