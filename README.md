@@ -1,5 +1,7 @@
-<h1 align="center">Hi there! 👋 I'm Satheesh Meadi</h1>
-<h3 align="center">🚀 Aspiring Data Engineer | Software Developer | Problem Solver</h3>
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com/?lines=Hi!+I'm+Satheesh+Meadi.;Data+Engineering:+Beyond+the+Ordinary.;Automation+for+the+Curious+and+Bold...;Wanderlust..;+Learning+Never+Stops!..." alt="Typing SVG" />
+</p>
+
 
 <p align="center">
 <img src="https://media.giphy.com/media/bcKmIWkUMCjVm/giphy.gif" width="300" alt="Coding Gif">
