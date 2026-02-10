@@ -59,20 +59,31 @@ I build AI and data systems that bridge agriculture and computer science. My cur
 - **[Stock Price Prediction by Normalizing LSTM and GRU Models](https://www.researchgate.net/publication/383870856_View_of_Stock_Price_Prediction_by_Normalizing_LSTM_and_GRU_Models)**
 
 ---
-
 ## GitHub Stats
+
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=SATHEESH-MEADI&show_icons=true&theme=tokyonight&cache_seconds=7200" alt="GitHub Stats" />
-  <br>
-  <img src="https://streak-stats.demolab.com?user=SATHEESH-MEADI&theme=tokyonight&cache_seconds=7200" alt="GitHub Streak" />
-  <br>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SATHEESH-MEADI&layout=compact&theme=tokyonight&cache_seconds=7200" alt="Top Languages" />
+  <img
+    src="https://github-readme-stats.vercel.app/api?username=SATHEESH-MEADI&show_icons=true&theme=tokyonight&cache_seconds=7200&v=1"
+    alt="GitHub Stats"
+  />
+  <br/>
+  <img
+    src="https://streak-stats.demolab.com?user=SATHEESH-MEADI&theme=tokyonight&cache_seconds=7200&v=1"
+    alt="GitHub Streak"
+  />
+  <br/>
+  <img
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=SATHEESH-MEADI&layout=compact&theme=tokyonight&cache_seconds=7200&v=1"
+    alt="Top Languages"
+  />
 </p>
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=SATHEESH-MEADI&column=7&theme=algolia&margin-w=15" alt="Trophies" />
+  <img
+    src="https://github-profile-trophy.vercel.app/?username=SATHEESH-MEADI&column=7&theme=algolia&margin-w=15&v=1"
+    alt="Trophies"
+  />
 </p>
-
 ---
 
 ## Currently Learning
