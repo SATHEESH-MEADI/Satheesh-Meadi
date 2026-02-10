@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll(".section");
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -6,22 +7,35 @@ document.addEventListener("DOMContentLoaded", () => {
                 entry.target.style.transform = "translateY(0)";
             }
         });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.2 });
 
-    document.querySelectorAll("section").forEach(section => {
+    sections.forEach(section => {
         section.style.opacity = "0";
-        section.style.transform = "translateY(30px)";
+        section.style.transform = "translateY(24px)";
+        section.style.transition = "all 0.6s ease";
         observer.observe(section);
     });
-});
 
-
-document.addEventListener("DOMContentLoaded", function() {
     const typed = new Typed('.multiple-text', {
-        strings: ['Data Engineer','Data Analyst','Software Engineer','Data Scientist', 'AI Enthusiast', 'Tech Innovator','Machine Learning Engineer'],
-        typeSpeed: 100,
-        backSpeed: 50,
-        backDelay: 1000,
+        strings: [
+            'Data Engineer',
+            'Applied AI Researcher',
+            'ML Engineer',
+            'PhD Researcher'
+        ],
+        typeSpeed: 80,
+        backSpeed: 40,
+        backDelay: 1200,
         loop: true
     });
+
+    const navToggle = document.getElementById("navToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    if (navToggle && navLinks) {
+        navToggle.addEventListener("click", () => {
+            const isOpen = navLinks.classList.toggle("open");
+            navToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+    }
 });

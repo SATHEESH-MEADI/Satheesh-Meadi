@@ -3,124 +3,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Satheesh Meadi Portfolio</title>
+    <title>Satheesh Meadi | Data Engineering & Applied AI</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
     <script defer src="scripts/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <nav>
-            <h1 class="logo">My <span class="highlight">Journey</span></h1>
-            <ul class="nav-links">
-                <li><a href="#Home">Home</a></li>
+    <header class="site-header">
+        <nav class="nav">
+            <a class="logo" href="#home">Satheesh <span class="logo-accent">Meadi</span></a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#about">About</a></li>
-                <li><a href="#Experience">Experience</a></li>
+                <li><a href="#highlights">Highlights</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <!-- Home Section -->
 
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Greetings, I'm <span class="highlight">Satheesh Meadi.</span></h2>
-            
-            <!-- Quote placed outside of <h2> for correct formatting -->
-            <p class="quote">"Turning Data into Insights, One Byte at a Time."</p>
-            
-            <h3 class="text-animate">I'm a <span class="multiple-text"></span></h3>
-            <a href="#projects" class="cta-button">View My Work</a>
-        </div>
-        
-        <div class="hero-image">
-            <img src="images/Satheesh.jpeg" alt="Satheesh Meadi">
-        </div>
-    </section>
-    
-    
-
-        <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>Passionate about <strong>AI & Machine Learning</strong>, I enjoy turning <span class="highlight">raw data into insights</span>. 
-        My expertise includes predictive analytics, deep learning, and data storytelling.</p>
-        <div class="about-grid">
-            <div class="about-item">
-                <h3>üìç Location</h3>
-                <p>Maryland, USA</p>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">PhD student in Biosystems & Agricultural Engineering</p>
+                <h1>Designing data systems and applied AI that make complex decisions feel simple.</h1>
+                <p class="lead">
+                    Aspiring Data Engineer with hands-on experience in scalable pipelines, cloud systems,
+                    and LLM research. Focused on healthcare, finance, sports analytics, and sustainable agriculture.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="cta-button">View Projects</a>
+                    <a href="#contact" class="ghost-button">Letís Collaborate</a>
+                </div>
+                <div class="hero-meta">
+                    <span>Stillwater, Oklahoma</span>
+                    <span>Open to full-time Data Engineering / Applied AI roles</span>
+                </div>
+                <div class="text-animate">I work as a <span class="multiple-text"></span></div>
             </div>
-            <div class="about-item">
-                <h3>üéì Education</h3>
-                <p>Data Science Student</p>
+            <div class="hero-image">
+                <div class="image-frame">
+                    <img src="images/Satheesh.jpeg" alt="Satheesh Meadi">
+                </div>
             </div>
-            <div class="about-item">
-                <h3>üí° Interests</h3>
-                <p>AI, Neural Networks, Data Visualization</p>
+        </section>
+
+        <section id="about" class="section about">
+            <div class="section-header">
+                <h2>About</h2>
+                <p>AI researcher and data engineer building reliable, human-centered systems.</p>
             </div>
-        </div>
-    </section>
-    
-
-
-
-<!--Experience Section-->
-
-    <section id="experience" class="experience">
-        <h2>My Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <h3>üöÄ Data Science Intern</h3>
-                <p>Worked on predictive analytics and built ML models to improve decision-making.</p>
-                <span>2024 - Present</span>
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>Focus</h3>
+                    <p>Scalable ETL, cloud optimization, and LLM fine-tuning for domain-specific intelligence.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Current Role</h3>
+                    <p>Graduate Research Assistant at Oklahoma State University (Jan 2026 - Present).</p>
+                </div>
+                <div class="about-card">
+                    <h3>Previous</h3>
+                    <p>Data Engineering and AI research at UMBC, Handshake AI, and LTIMindtree.</p>
+                </div>
             </div>
-            <div class="timeline-item">
-                <h3>üìä Data Analyst</h3>
-                <p>Designed dashboards and visualized large datasets for business insights.</p>
-                <span>2023 - 2024</span>
+        </section>
+
+        <section id="highlights" class="section highlights">
+            <div class="section-header">
+                <h2>Career Highlights</h2>
+                <p>Impact-driven wins across data engineering, NLP, and analytics.</p>
             </div>
-        </div>
-    </section>
-    
-
-
-
-
-    <!--Project Section -->
-    <section id="projects" class="projects">
-        <h2>Projects</h2>
-        <div class="project-container">
-            <div class="project">
-                <img src="images/project1.jpg" alt="Project 1">
-                <h3>Machine Learning Model</h3>
-                <p>Built a model predicting customer behavior.</p>
+            <div class="highlight-grid">
+                <div class="highlight-card">
+                    <h3>30% Faster Pipelines</h3>
+                    <p>Optimized Spark + AWS workflows at LTIMindtree to improve ETL throughput.</p>
+                </div>
+                <div class="highlight-card">
+                    <h3>15+ Languages</h3>
+                    <p>Delivered a multilingual medical summarizer with 95% accuracy for 200+ professionals.</p>
+                </div>
+                <div class="highlight-card">
+                    <h3>40% Better Risk Analysis</h3>
+                    <p>Automated financial ingestion with PySpark to boost analytics performance.</p>
+                </div>
+                <div class="highlight-card">
+                    <h3>Mentored 20+ Students</h3>
+                    <p>Improved project delivery by 40% with Python, Airflow, and AWS guidance.</p>
+                </div>
             </div>
-            <div class="project">
-                <img src="images/project2.jpg" alt="Project 2">
-                <h3>Data Visualization Dashboard</h3>
-                <p>Created an interactive dashboard for business insights.</p>
+        </section>
+
+        <section id="experience" class="section experience">
+            <div class="section-header">
+                <h2>Experience</h2>
+                <p>Research, teaching, and industry roles spanning data systems and applied AI.</p>
             </div>
-        </div>
-    </section>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-role">Graduate Research Assistant</div>
+                    <div class="timeline-org">Oklahoma State University</div>
+                    <div class="timeline-date">Jan 2026 - Present ∑ United States</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-role">AI Research Fellow (Handshake MOVE)</div>
+                    <div class="timeline-org">Handshake AI Solutions</div>
+                    <div class="timeline-date">Aug 2025 - Present ∑ Baltimore, MD</div>
+                    <ul>
+                        <li>Fine-tuning GPT-family models for domain-specific reasoning and factual precision.</li>
+                        <li>Building integrity benchmarks for trustworthy LLM behavior and transparency.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-role">Graduate Assistant (NLP & LLMs)</div>
+                    <div class="timeline-org">University of Maryland Baltimore County</div>
+                    <div class="timeline-date">Aug 2024 - Apr 2025 ∑ Baltimore, MD</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-role">Data Engineer</div>
+                    <div class="timeline-org">University of Maryland Baltimore County</div>
+                    <div class="timeline-date">May 2024 - Apr 2025 ∑ Baltimore, MD</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-role">AI Researcher - Generative Models</div>
+                    <div class="timeline-org">University of Maryland Baltimore County</div>
+                    <div class="timeline-date">Sep 2023 - May 2024 ∑ United States</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-role">Graduate Engineer Intern</div>
+                    <div class="timeline-org">LTIMindtree</div>
+                    <div class="timeline-date">Jan 2023 - Aug 2023 ∑ India</div>
+                </div>
+            </div>
+        </section>
 
-    
-    <!--Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Get in Touch</h2>
-        <p>Feel free to connect with me on LinkedIn or GitHub.</p>
-        <div class="contact-links">
-            <a href="https://www.linkedin.com/in/satheesh-meadi" class="cta-button">LinkedIn</a>
-            <a href="https://github.com/SATHEESH-MEADI" class="cta-button">GitHub</a>
-        </div>
-    </section>
+        <section id="projects" class="section projects">
+            <div class="section-header">
+                <h2>Projects</h2>
+                <p>Real-world systems that blend data engineering, ML, and decision support.</p>
+            </div>
+            <div class="project-grid">
+                <article class="project-card">
+                    <h3>Medi-Text Summarizer</h3>
+                    <p>Transformer-based medical summarization with NER and multilingual support (15+ languages).</p>
+                    <div class="project-tags">PubMedBERT ∑ DistilBERT ∑ LLaMA ∑ Streamlit</div>
+                    <a class="project-link" href="https://github.com/SATHEESH-MEADI/Medical-Text-Analysis-System.git">View Project</a>
+                </article>
+                <article class="project-card">
+                    <h3>Dribble, Predict, Win</h3>
+                    <p>NBA outcome forecasting with PySpark pipelines and model drift monitoring.</p>
+                    <div class="project-tags">PySpark ∑ ML ∑ Feature Engineering</div>
+                    <a class="project-link" href="https://github.com/SATHEESH-MEADI/NBA-Game-Forecast.git">View Project</a>
+                </article>
+                <article class="project-card">
+                    <h3>Financial Risk Pipeline</h3>
+                    <p>Real-time market ingestion, CAPM analytics, and portfolio dashboards.</p>
+                    <div class="project-tags">Airflow ∑ Snowflake ∑ Python ∑ PostgreSQL</div>
+                    <a class="project-link" href="https://github.com/SATHEESH-MEADI/Real_Time_Financial_Risk_Dashboard.git">View Project</a>
+                </article>
+                <article class="project-card">
+                    <h3>Corporate Training Hub</h3>
+                    <p>SQL-driven ETL workflows to streamline reporting and validation.</p>
+                    <div class="project-tags">SQL ∑ ETL ∑ Data Quality</div>
+                    <a class="project-link" href="https://github.com/SATHEESH-MEADI/Corporate-Training-Knowledge-Hub.git">View Project</a>
+                </article>
+            </div>
+        </section>
 
+        <section id="publications" class="section publications">
+            <div class="section-header">
+                <h2>Publications</h2>
+                <p>Research in AI for agriculture and financial time-series modeling.</p>
+            </div>
+            <div class="publication-list">
+                <div class="publication-item">
+                    <h3>Extreme Learning Mechanism for Classification & Prediction of Soil Fertility Index</h3>
+                    <p>Applied ML to classify soil nutrient indices and predict pH for sustainable fertilizer strategies.</p>
+                </div>
+                <div class="publication-item">
+                    <h3>Stock Price Prediction by Normalizing LSTM and GRU Models</h3>
+                    <p>Hybrid deep learning approach for next-day stock price forecasting in volatile markets.</p>
+                </div>
+            </div>
+        </section>
 
-    <!--Footer Section -->
+        <section id="skills" class="section skills">
+            <div class="section-header">
+                <h2>Skills</h2>
+                <p>Tools and platforms I use to build robust data and AI systems.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skills-card">
+                    <h3>Languages</h3>
+                    <p>Python, Java, C++, SQL, Bash</p>
+                </div>
+                <div class="skills-card">
+                    <h3>Data & Processing</h3>
+                    <p>Spark, PySpark, Hadoop, Kafka, Spark Streaming</p>
+                </div>
+                <div class="skills-card">
+                    <h3>Warehousing</h3>
+                    <p>Snowflake, Redshift, BigQuery, PostgreSQL, MySQL, Delta Lake</p>
+                </div>
+                <div class="skills-card">
+                    <h3>Cloud</h3>
+                    <p>AWS, GCP, Azure</p>
+                </div>
+                <div class="skills-card">
+                    <h3>Governance</h3>
+                    <p>dbt, Great Expectations, Schema Evolution, CloudWatch, Datadog</p>
+                </div>
+                <div class="skills-card">
+                    <h3>ML & NLP</h3>
+                    <p>Hugging Face, MLflow, SageMaker, Spacy, NLTK, RAG, GenAI</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section certifications">
+            <div class="section-header">
+                <h2>Certifications</h2>
+                <p>Focused on modern data tooling and collaboration workflows.</p>
+            </div>
+            <div class="cert-grid">
+                <div class="cert-card">Academy Accreditation - Databricks Fundamentals</div>
+                <div class="cert-card">GitHub Issues and Projects for Teams</div>
+                <div class="cert-card">Practical GitHub Project Management and Collaboration</div>
+                <div class="cert-card">Career Essentials in GitHub (Professional Certificate)</div>
+                <div class="cert-card">Learning GitHub Codespaces for Enterprise</div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <div class="section-header">
+                <h2>Contact</h2>
+                <p>Letís talk about data, AI, or building meaningful products.</p>
+            </div>
+            <div class="contact-card">
+                <a href="mailto:satheeshm1202@gmail.com">satheeshm1202@gmail.com</a>
+                <a href="https://www.linkedin.com/in/satheeshmeadi">LinkedIn</a>
+                <a href="https://github.com/SATHEESH-MEADI">GitHub</a>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2025 MyPortfolio</p>
+        <p>&copy; 2026 Satheesh Meadi. Built with care for GitHub Pages.</p>
     </footer>
 </body>
 </html>
+
