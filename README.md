@@ -2,6 +2,7 @@
   <img src="https://readme-typing-svg.demolab.com/?lines=Hi!+I'm+Satheesh+Meadi.;Agri-Tech+AI+%7C+Data+Science+%7C+Research;Data+Pipelines+%7C+LLMs+%7C+Cloud;Building+AI+for+Sustainable+Systems;Always+learning,+always+building." alt="Typing SVG" />
 </p>
 
+
 <p align="center">
   <img src="https://media.giphy.com/media/bcKmIWkUMCjVm/giphy.gif" width="300" alt="Coding Gif" style="border-radius: 50%;">
 </p>
@@ -62,25 +63,31 @@ I build AI and data systems that bridge agriculture and computer science. My cur
 ## GitHub Stats
 
 <p align="center">
+  <!-- GitHub Stats (mirror) -->
   <img
-    src="https://github-readme-stats.vercel.app/api?username=SATHEESH-MEADI&show_icons=true&theme=tokyonight&cache_seconds=7200&v=1"
+    src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=SATHEESH-MEADI&show_icons=true&theme=tokyonight&cache_seconds=7200"
     alt="GitHub Stats"
   />
   <br/>
+
+  <!-- Streak (already works for you) -->
   <img
-    src="https://streak-stats.demolab.com?user=SATHEESH-MEADI&theme=tokyonight&cache_seconds=7200&v=1"
+    src="https://streak-stats.demolab.com?user=SATHEESH-MEADI&theme=tokyonight&cache_seconds=7200"
     alt="GitHub Streak"
   />
   <br/>
+
+  <!-- Top Languages (mirror) -->
   <img
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=SATHEESH-MEADI&layout=compact&theme=tokyonight&cache_seconds=7200&v=1"
+    src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=SATHEESH-MEADI&layout=compact&theme=tokyonight&cache_seconds=7200"
     alt="Top Languages"
   />
 </p>
 
 <p align="center">
+  <!-- Trophies (mirror) -->
   <img
-    src="https://github-profile-trophy.vercel.app/?username=SATHEESH-MEADI&column=7&theme=algolia&margin-w=15&v=1"
+    src="https://github-profile-trophy-git-masterrstaa-rickstaa.vercel.app/?username=SATHEESH-MEADI&column=7&theme=algolia&margin-w=15"
     alt="Trophies"
   />
 </p>
@@ -92,22 +99,6 @@ I build AI and data systems that bridge agriculture and computer science. My cur
 - Advanced data pipelines for scalable research workflows
 
 ---
-
-## Connect with Me
-<p align="center">
-  <a href="https://www.linkedin.com/in/satheesh-meadi/">
-    <img src="https://img.shields.io/badge/LinkedIn-006699?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-  <a href="mailto:satheeshm1202@gmail.com">
-    <img src="https://img.shields.io/badge/Email-8F4D33?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-  <a href="https://leetcode.com/Satheesh_Meadi/">
-    <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" />
-  </a>
-  <a href="https://github.com/SATHEESH-MEADI">
-    <img src="https://img.shields.io/badge/GitHub-111111?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-</p>
 
 ---
 
@@ -125,4 +116,23 @@ _"The best way to predict the future is to invent it."_ - Alan Kay
 
 <p align="center">
   <img src="https://media.giphy.com/media/QZkpIdieotn3i/giphy.gif" width="300" alt="Quote Gif">
+</p>
+
+
+
+
+## Connect with Me
+<p align="center">
+  <a href="https://www.linkedin.com/in/satheesh-meadi/">
+    <img src="https://img.shields.io/badge/LinkedIn-006699?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="mailto:satheeshm1202@gmail.com">
+    <img src="https://img.shields.io/badge/Email-8F4D33?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://leetcode.com/Satheesh_Meadi/">
+    <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" />
+  </a>
+  <a href="https://github.com/SATHEESH-MEADI">
+    <img src="https://img.shields.io/badge/GitHub-111111?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
 </p>
