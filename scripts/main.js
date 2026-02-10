@@ -38,4 +38,30 @@ document.addEventListener("DOMContentLoaded", () => {
             navToggle.setAttribute("aria-expanded", String(isOpen));
         });
     }
+
+    const lens = document.getElementById("lens");
+    if (lens && window.matchMedia("(pointer: fine)").matches) {
+        document.body.classList.add("lens-active");
+
+        window.addEventListener("mousemove", (event) => {
+            lens.style.left = `${event.clientX}px`;
+            lens.style.top = `${event.clientY}px`;
+        });
+
+        const hoverTargets = document.querySelectorAll("a, button, .project-card, .about-card, .highlight-card, p, h1, h2, h3, span, li");
+        hoverTargets.forEach(target => {
+            target.addEventListener("mouseenter", () => document.body.classList.add("lens-hover"));
+            target.addEventListener("mouseleave", () => document.body.classList.remove("lens-hover"));
+        });
+
+        window.addEventListener("mouseout", (event) => {
+            if (!event.relatedTarget) {
+                document.body.classList.remove("lens-active");
+            }
+        });
+
+        window.addEventListener("mouseover", () => {
+            document.body.classList.add("lens-active");
+        });
+    }
 });
