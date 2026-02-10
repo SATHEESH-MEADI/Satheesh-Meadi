@@ -1,44 +1,65 @@
-# Satheesh Meadi
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com/?lines=Hi!+I'm+Satheesh+Meadi.;Data+Science+%7C+Agri-Tech+AI+%7C+Researcher;Building+AI+for+Sustainable+Systems;Data+Pipelines+%7C+LLMs+%7C+Cloud;Always+learning,+always+building." alt="Typing SVG" />
+</p>
 
-PhD student in Biosystems & Agricultural Engineering at Oklahoma State University. I build scalable data pipelines, optimize cloud data systems, and research applied AI for real-world impact in healthcare, finance, sports, and sustainable agriculture.
+<p align="center">
+  <img src="https://media.giphy.com/media/bcKmIWkUMCjVm/giphy.gif" width="300" alt="Coding Gif">
+</p>
 
-## Focus Areas
-- Data engineering for reliable, high-throughput pipelines
-- Applied AI and LLM research for domain-specific intelligence
-- Cloud data platforms and observability
-- Product-minded analytics for decision support
+<p align="center">
+  Passionate about connecting agriculture and computer science through data engineering and applied AI.<br>
+  PhD student in Biosystems & Agricultural Engineering | Oklahoma State University
+</p>
 
-## Career Highlights
-- Increased ETL pipeline speed by 30% using Spark + AWS optimizations
-- Delivered a multilingual medical summarizer (15+ languages) with 95% accuracy for 200+ professionals
-- Automated financial data ingestion with PySpark, improving risk analysis performance by 40%
-- Mentored 20+ students in Python, Airflow, and AWS, improving project delivery rates by 40%
+---
 
-## Experience Snapshot
-- Graduate Research Assistant, Oklahoma State University (Jan 2026 - Present)
-- AI Research Fellow (Handshake MOVE), Handshake AI Solutions (Aug 2025 - Present)
-- Graduate Assistant (NLP & LLMs), UMBC (Aug 2024 - Apr 2025)
-- Data Engineer, UMBC (May 2024 - Apr 2025)
-- AI Researcher - Generative Models, UMBC (Sep 2023 - May 2024)
-- Graduate Engineer Intern, LTIMindtree (Jan 2023 - Aug 2023)
+## About Me
+I design data systems and applied AI to solve real-world problems in agriculture, healthcare, finance, and sports. My work blends scalable pipelines, cloud platforms, and LLM research to support smarter decisions.
 
-## Projects
+---
+
+## Tech Stack
+<p align="center">
+  <img src="https://img.shields.io/badge/Code-Python-blue?style=for-the-badge&logo=python" />
+  <img src="https://img.shields.io/badge/Code-Java-orange?style=for-the-badge&logo=java" />
+  <img src="https://img.shields.io/badge/Code-C++-00599C?style=for-the-badge&logo=c%2B%2B" />
+  <img src="https://img.shields.io/badge/SQL-PostgreSQL-316192?style=for-the-badge&logo=postgresql" />
+  <img src="https://img.shields.io/badge/Big%20Data-Spark-E25A1C?style=for-the-badge&logo=apachespark" />
+  <img src="https://img.shields.io/badge/Cloud-AWS-FF9900?style=for-the-badge&logo=amazonaws" />
+  <img src="https://img.shields.io/badge/Cloud-GCP-4285F4?style=for-the-badge&logo=googlecloud" />
+  <img src="https://img.shields.io/badge/Cloud-Azure-0078D4?style=for-the-badge&logo=microsoftazure" />
+  <img src="https://img.shields.io/badge/Tools-Docker-2496ED?style=for-the-badge&logo=docker" />
+  <img src="https://img.shields.io/badge/ML-HuggingFace-FFD21E?style=for-the-badge&logo=huggingface" />
+</p>
+
+---
+
+## Featured Projects
 - **Medi-Text Summarizer**
-  Transformer-based medical summarization with NER and multilingual support.
+  Transformer-based medical summarization with NER and multilingual support (15+ languages).
   Repo: `https://github.com/SATHEESH-MEADI/Medical-Text-Analysis-System.git`
+
 - **Dribble, Predict, Win**
   NBA outcome forecasting with PySpark pipelines and model drift monitoring.
   Repo: `https://github.com/SATHEESH-MEADI/NBA-Game-Forecast.git`
+
 - **Financial Risk Pipeline**
   Real-time market ingestion, CAPM analytics, and portfolio dashboards.
   Repo: `https://github.com/SATHEESH-MEADI/Real_Time_Financial_Risk_Dashboard.git`
+
 - **Corporate Training Hub**
   SQL-driven ETL workflows to streamline reporting and validation.
   Repo: `https://github.com/SATHEESH-MEADI/Corporate-Training-Knowledge-Hub.git`
 
+---
+
 ## Publications
 - Extreme Learning Mechanism for Classification & Prediction of Soil Fertility Index
+  `https://www.pnrjournal.com/index.php/home/article/view/1622`
 - Stock Price Prediction by Normalizing LSTM and GRU Models
+  `https://www.researchgate.net/publication/383870856_View_of_Stock_Price_Prediction_by_Normalizing_LSTM_and_GRU_Models`
+
+---
 
 ## Certifications
 - Academy Accreditation - Databricks Fundamentals
@@ -47,31 +68,31 @@ PhD student in Biosystems & Agricultural Engineering at Oklahoma State Universit
 - Career Essentials in GitHub (Professional Certificate)
 - Learning GitHub Codespaces for Enterprise
 
-## Skills
-- **Languages:** Python, Java, C++, SQL, Bash
-- **Data & Processing:** Spark, PySpark, Hadoop, Kafka, Spark Streaming
-- **Warehousing:** Snowflake, Redshift, BigQuery, PostgreSQL, MySQL, Delta Lake
-- **Cloud:** AWS, GCP, Azure
-- **Governance:** dbt, Great Expectations, Schema Evolution, CloudWatch, Datadog
-- **ML & NLP:** Hugging Face, MLflow, SageMaker, Spacy, NLTK, RAG, GenAI
-- **Visualization:** Tableau, Power BI, Streamlit, Plotly, Seaborn
-- **CI/CD & IaC:** GitHub Actions, Docker, Kubernetes, Terraform
+---
 
-## GitHub Pages (User Page)
-This repo is designed to be hosted as a user page. Ensure the repository name is exactly:
-- `satheesh-meadi.github.io`
+## GitHub Stats
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=SATHEESH-MEADI&show_icons=true&theme=calm" alt="GitHub Stats" />
+  <br>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=SATHEESH-MEADI&theme=calm" alt="GitHub Streak" />
+</p>
 
-Then:
-1. Push `index.html`, `styles/`, `scripts/`, and `images/` to the repo root.
-2. In GitHub, go to **Settings ? Pages**.
-3. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
-4. Choose `main` and `/ (root)`, then save.
+---
 
-Your site will be published at:
-- `https://satheesh-meadi.github.io`
+## Connect with Me
+<p align="center">
+  <a href="https://www.linkedin.com/in/satheesh-meadi/">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="mailto:satheeshm1202@gmail.com">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://github.com/SATHEESH-MEADI">
+    <img src="https://img.shields.io/badge/GitHub-111111?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</p>
 
-## Contact
-- Email: `satheeshm1202@gmail.com`
-- LinkedIn: `https://www.linkedin.com/in/satheeshmeadi`
-- GitHub: `https://github.com/SATHEESH-MEADI`
+---
 
+## Fun Fact
+I enjoy building AI tools that make complex data intuitive, especially for agriculture and sustainability.
