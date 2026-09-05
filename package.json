@@ -1,0 +1,11 @@
+{
+  "name": "satheesh-meadi-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Research portfolio with a 3D agricultural field and a source-backed fieldwork journal.",
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "check": "node tools/check_site.mjs"
+  }
+}

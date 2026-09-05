@@ -1,0 +1,122 @@
+[
+  {
+    "asset": "images/fieldwork/crs-installation.webp",
+    "source_relative_to_field_trips": "2026_CRS/Photos/2026-06-15/All_Sensors_Overview_1.jpg",
+    "source_sha256": "d3c9d40af23357cc40f70993c2978acffe02a7f49f1c630c36e88db16b4bdd36"
+  },
+  {
+    "asset": "images/fieldwork/crs-july.webp",
+    "source_relative_to_field_trips": "2026_CRS/Photos/2026-07-30/Field_View_over_Truck.jpg",
+    "source_sha256": "c2d8a4bfb8e8bbbaff5e9398dcea21c5465c189aeac541874d6f34a3a28d051c"
+  },
+  {
+    "asset": "images/fieldwork/canopy-sensor.webp",
+    "source_relative_to_field_trips": "2026_CRS/Photos/2026-07-30/Only_Height_adjusted_sensor.jpg",
+    "source_sha256": "4985afa75ba31adad27064e3a04f55705a723cbf2c5c135f560d815b0b7514fa"
+  },
+  {
+    "asset": "images/fieldwork/altus-installation.webp",
+    "source_relative_to_field_trips": "2026_Altus/SWREC/Photos/2026-07-20/All_Sensors_overview.jpeg",
+    "source_sha256": "ab6f9b13b0de92c32f820cc084e870b819df76900ec72a047cf644de3373be05"
+  },
+  {
+    "asset": "images/fieldwork/muller-field.webp",
+    "source_relative_to_field_trips": "2026_Altus/Muller Merrit River/Photos/2026-06-30/View_From_truck.jpg",
+    "source_sha256": "038c29ffc39d2ff4ed989f098825072ef87682eba3a2a1d3b82edbe15adc7988"
+  },
+  {
+    "asset": "images/fieldwork/panhandle-sorghum.webp",
+    "source_relative_to_field_trips": "2026_Panhandle_PDS/B4_Frantz_Frantz/Photos/2026_Sorghum/2026-07-10/Field_Overview.jpg",
+    "source_sha256": "215debd33019f7a32523e77a44e3c40d28593d0c39bd46d0387cecd4edd738f0"
+  },
+  {
+    "asset": "images/fieldwork/panhandle-sunflower.webp",
+    "source_relative_to_field_trips": "2026_Panhandle_PDS/C2_Arthaud_Billy/Photos/2026_Sunflower/2026-07-10/Field_Overview.jpg",
+    "source_sha256": "1d1481a2bca68638b85e7c8adf7d08f7ff94f099e043b5a19009c5b217eb9b03"
+  },
+  {
+    "asset": "images/fieldwork/panhandle-august-05.webp",
+    "source_relative_to_field_trips": "2026_Panhandle_PDS/T7_Martinez_McMurray/Photos/2026_Corn/2026-08-05/Field_Overview.jpg",
+    "source_sha256": "b1cc89dbaf41b27bbf6e5bdf4c8153cfe5b7f33987582c90c27c5a3028962945"
+  },
+  {
+    "asset": "images/fieldwork/panhandle-august-14.webp",
+    "source_relative_to_field_trips": "2026_Panhandle_PDS/T8_Martinez_EMiller/Photos/2026_Corn/2026-08-14/Field_Overview.jpg",
+    "source_sha256": "34bf2d178adc9057ecf27165bc711690c0a78ae625a6d85632ff46861411fcae"
+  },
+  {
+    "asset": "images/fieldwork/season-2026-06-15.webp",
+    "source_relative_to_field_trips": "2026_CRS/Photos/2026-06-15/Field_View_Before_Installation_1.jpg",
+    "source_sha256": "db9831ec609eadccdc0cf2be9bb38e1a307371a68d338190dc8a0b2f71af3281"
+  },
+  {
+    "asset": "images/fieldwork/season-2026-06-30.webp",
+    "source_relative_to_field_trips": "2026_CRS/Photos/2026-06-30/Field_View.jpg",
+    "source_sha256": "2aa2bd2fd380adf8e2032f5dc83831ccafbd834cf0bc0ea3fb5004541e3b6887"
+  },
+  {
+    "asset": "images/fieldwork/season-2026-07-08.webp",
+    "source_relative_to_field_trips": "2026_CRS/Photos/2026-07-08/Field_View_Over_truck.jpg",
+    "source_sha256": "ee0180034762152353f35904a41e02f8c2747e49594b7f3a728c05eb3a56cf6a"
+  },
+  {
+    "asset": "images/fieldwork/season-2026-07-20.webp",
+    "source_relative_to_field_trips": "2026_CRS/Photos/2026-07-20/FieldOverview.jpeg",
+    "source_sha256": "093583c137f5e17df734e0e546417368a2fe9ef71102498f9c3be6853263d601"
+  },
+  {
+    "asset": "images/fieldwork/season-2026-07-30.webp",
+    "source_relative_to_field_trips": "2026_CRS/Photos/2026-07-30/Field_View_over_Truck.jpg",
+    "source_sha256": "c2d8a4bfb8e8bbbaff5e9398dcea21c5465c189aeac541874d6f34a3a28d051c"
+  },
+  {
+    "asset": "images/fieldwork/season-2026-08-12.webp",
+    "source_relative_to_field_trips": "2026_CRS/Photos/2026-08-12/Field_Overview_From_Truck.jpeg",
+    "source_sha256": "1fbd12b6afbb50cf7a2d3383644305fadce1660ab73b31c18d45cf7facc2606a"
+  },
+  {
+    "asset": "images/fieldwork/season-2026-08-19.webp",
+    "source_relative_to_field_trips": "2026_CRS/Photos/2026-08-19/Field_Overview.jpg",
+    "source_sha256": "e4dda787f0043efbc7011e439f8e391928bf2706f875f34d0498536c98c62997"
+  },
+  {
+    "asset": "images/fieldwork/panhandle-august-21.webp",
+    "source_relative_to_field_trips": "2026_Panhandle_PDS/T1_Freeman_Freeman/Photos/2026_Corn/2026-08-21/Broken_Sensors_1.jpg",
+    "source_sha256": "294aa42d733e326f1649cc979546f9a0135f464f460ae6328455377498693618"
+  },
+  {
+    "asset": "images/fieldwork/altus-2026-06-15.webp",
+    "source_relative_to_field_trips": "2026_Altus/Muller Merrit River/Photos/2026-06-15/Field_View_Over_Truck_After_Installation_1.jpg",
+    "source_sha256": "40b005b6cd392d86816d7e8afc087ae07ac4924a04cfee7d3b1295da8ba10db7"
+  },
+  {
+    "asset": "images/fieldwork/altus-2026-06-30.webp",
+    "source_relative_to_field_trips": "2026_Altus/Muller Merrit River/Photos/2026-06-30/View_From_truck.jpg",
+    "source_sha256": "038c29ffc39d2ff4ed989f098825072ef87682eba3a2a1d3b82edbe15adc7988"
+  },
+  {
+    "asset": "images/fieldwork/altus-2026-07-08.webp",
+    "source_relative_to_field_trips": "2026_Altus/Muller Merrit River/Photos/2026-07-08/Field_Overview_from_truck.jpg",
+    "source_sha256": "730e9ab187e6f77479dadd488e171330cbb2b5dc1f838fe7eb9038881b6426e0"
+  },
+  {
+    "asset": "images/fieldwork/altus-2026-07-20.webp",
+    "source_relative_to_field_trips": "2026_Altus/Muller Merrit River/Photos/2026-07-20/Field_Overview.jpeg",
+    "source_sha256": "5b6c2b3232aa96eac76e81ccad175529b1ee02b20d40bd4e595fc674f6ca5b45"
+  },
+  {
+    "asset": "images/fieldwork/altus-2026-07-30.webp",
+    "source_relative_to_field_trips": "2026_Altus/Muller Merrit River/Photos/2026-07-30/Field_overview_from_truck.jpg",
+    "source_sha256": "16c155eba4727783a8c0104f2acbb1269d3165b11632aac90ddb91c35a3244e9"
+  },
+  {
+    "asset": "images/fieldwork/altus-2026-08-12.webp",
+    "source_relative_to_field_trips": "2026_Altus/Muller Merrit River/Photos/2026-08-12/Field_Overview_from_Truck.jpeg",
+    "source_sha256": "5871988675f42c4e7b8a51544432795e6ff949697458e98e6a106fad4fa61723"
+  },
+  {
+    "asset": "images/fieldwork/altus-2026-08-19.webp",
+    "source_relative_to_field_trips": "2026_Altus/Muller Merrit River/Photos/2026-08-19/Field_Overview.jpg",
+    "source_sha256": "06d787cb723779ffe7f3c3d660beab0f16feb329ef36ae10498bba97f4fed8ce"
+  }
+]

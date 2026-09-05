@@ -1,138 +1,65 @@
-﻿<p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?lines=Hi!+I'm+Satheesh+Meadi.;Agri-Tech+AI+%7C+Data+Science+%7C+Research;Data+Pipelines+%7C+LLMs+%7C+Cloud;Building+AI+for+Sustainable+Systems;Always+learning,+always+building." alt="Typing SVG" />
-</p>
+# Satheesh Meadi
 
+PhD researcher in Biosystems & Agricultural Engineering at Oklahoma State University, connecting agricultural water management, geospatial analytics, and applied AI.
 
-<p align="center">
-  <img src="https://media.giphy.com/media/bcKmIWkUMCjVm/giphy.gif" width="300" alt="Coding Gif" style="border-radius: 50%;">
-</p>
+This repository contains my personal research portfolio: a custom 3D agricultural field, research and software projects, publications, education, and a photographic fieldwork journal.
 
-<p align="center">
-  PhD student in Biosystems & Agricultural Engineering at Oklahoma State University<br>
-  Connecting agriculture + computer science through data engineering and applied AI
-</p>
+## Preview locally
 
----
+With Node.js 20 or newer:
 
-## About Me
-I build AI and data systems that bridge agriculture and computer science. My current PhD research focuses on applying machine learning and scalable pipelines to improve decision-making in biosystems and environmental applications.
+```sh
+npm start
+```
 
----
+Open http://127.0.0.1:4173. There are no npm dependencies to install and no build step. The development server serves only website asset directories and listens on the local machine.
 
-## Highlights
-- Multilingual medical summarization (15+ languages) with 95% accuracy
-- 30% faster ETL throughput using Spark + AWS optimization
-- 40% faster financial analytics via PySpark ingestion
-- Mentored 20+ students in Python, Airflow, and AWS
+To use another port, set the `PORT` environment variable. A standard static server also works, for example `python -m http.server 4173 --bind 127.0.0.1`.
 
----
+## Validate
 
-## Tech Stack
-<p align="center">
-  <img src="https://img.shields.io/badge/Code-Python-2B5B84?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Code-Java-E76F00?style=for-the-badge&logo=java&logoColor=white" />
-  <img src="https://img.shields.io/badge/Code-C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" />
-  <img src="https://img.shields.io/badge/Database-PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/Big%20Data-Spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white" />
-  <img src="https://img.shields.io/badge/Cloud-AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" />
-  <img src="https://img.shields.io/badge/Cloud-GCP-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" />
-  <img src="https://img.shields.io/badge/Cloud-Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" />
-  <img src="https://img.shields.io/badge/Tools-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/ML-Hugging%20Face-FFB000?style=for-the-badge&logo=huggingface&logoColor=white" />
-</p>
+```sh
+npm run check
+```
 
----
+Checks local links, image files, section IDs, project detail references, and fieldwork counts against the reviewed source records. Browser QA covered desktop, tablet and phone layouts, the 3D layer buttons, regional filters, date selection, project dialogs, navigation, and the seven-frame season slider. See `docs/qa.md` for the recorded checks and limitations.
 
-## Featured Projects
-- **[Medi-Text Summarizer](https://github.com/SATHEESH-MEADI/Medical-Text-Analysis-System.git)**
-  Transformer-based medical summarization with NER and multilingual support (15+ languages).
-- **[Financial Risk Analysis](https://github.com/SATHEESH-MEADI/Real_Time_Financial_Risk_Dashboard.git)**
-  Real-time market ingestion, CAPM analytics, and portfolio dashboards.
-- **[Dribble, Predict, Win](https://github.com/SATHEESH-MEADI/NBA-Game-Forecast.git)**
-  NBA outcome forecasting with PySpark pipelines and model drift monitoring.
-- **[Corporate Training Hub](https://github.com/SATHEESH-MEADI/Corporate-Training-Knowledge-Hub.git)**
-  SQL-driven ETL workflows to streamline reporting and validation.
+## Edit the site
 
----
+| File | Purpose |
+| --- | --- |
+| `index.html` | Profile, research, publications, education, and semantic page structure |
+| `styles/main.css` | Responsive design, typography, colors, and layouts |
+| `scripts/content.js` | Dated field visits and project detail copy |
+| `scripts/main.js` | Navigation, filters, dialogs, season slider, and 3D loading |
+| `scripts/scene.js` | Procedural Three.js crop field and sensor illustration |
+| `images/fieldwork/` | Optimized copies of selected field photographs |
+| `assets/Satheesh-Meadi-CV.pdf` | Supplied July 22, 2026 CV |
+| `docs/content-provenance.md` | Content sources, counting rules, and scope |
+| `docs/asset-provenance.json` | Photo sources and hashes of original files |
 
-## Publications
-- **[Extreme Learning Mechanism for Classification & Prediction of Soil Fertility Index](https://www.pnrjournal.com/index.php/home/article/view/1622)**
-- **[Stock Price Prediction by Normalizing LSTM and GRU Models](https://www.researchgate.net/publication/383870856_View_of_Stock_Price_Prediction_by_Normalizing_LSTM_and_GRU_Models)**
+### Fieldwork data
 
----
-## GitHub Stats
+The current journal contains **11 distinct fieldwork dates and 36 site visits**, June–August 2026, across Caddo, Altus, and Panhandle PDS. Only field-note attendance lists naming Satheesh are included. Multiple site visits on one date are not counted as multiple travel dates. These records do not represent the full eight-month fieldwork history.
 
-<p align="center">
-  <!-- GitHub Stats (mirror) -->
-  <img
-    src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=SATHEESH-MEADI&show_icons=true&theme=tokyonight&cache_seconds=7200"
-    alt="GitHub Stats"
-  />
-  <br/>
+`tools/prepare_assets.py` regenerates WebP derivatives using Pillow, given `--field-root` pointing to the original `2026 Field Trips` directory. It reads and hash-checks the sources, never edits them. Original notes, raw datasets, and photographs remain outside this repository. Network-drive access is not required to run the website.
 
-  <!-- Streak (already works for you) -->
-  <img
-    src="https://streak-stats.demolab.com?user=SATHEESH-MEADI&theme=tokyonight&cache_seconds=7200"
-    alt="GitHub Streak"
-  />
-  <br/>
+### Graphics and accessibility
 
-  <!-- Top Languages (mirror) -->
-  <img
-    src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=SATHEESH-MEADI&layout=compact&theme=tokyonight&cache_seconds=7200"
-    alt="Top Languages"
-  />
-</p>
+The About portrait uses professional shot `satheesh-meadi-260324-0016.jpg`. `tools/prepare_portrait.py --source <original-file>` creates its optimized web copy and source-hash record without altering the original. Portrait preparation is separate from field-photo preparation.
 
-<p align="center">
-  <!-- Trophies (mirror) -->
-  <img
-    src="https://github-profile-trophy-git-masterrstaa-rickstaa.vercel.app/?username=SATHEESH-MEADI&column=7&theme=algolia&margin-w=15"
-    alt="Trophies"
-  />
-</p>
----
+Three.js **0.180.0** is vendored locally with its MIT license. The scene renders on interaction or resize rather than running a perpetual animation loop, pauses rendering offscreen, and caps device pixel ratio. Reduced-motion and data-saving preferences use the static SVG illustration. Unsupported WebGL also retains that illustration. The decorative scene is separate from the accessible layer controls and explanatory text.
 
-## Currently Learning
-- Applied AI for biosystems and environmental modeling
-- Domain-adapted LLM evaluation and safety
-- Advanced data pipelines for scalable research workflows
+Other features include a skip link, native modal dialogs, keyboard controls, visible focus states, responsive navigation, labeled photography, and lazy-loaded images. Google Fonts supplies DM Sans and Instrument Serif with local system-font fallbacks. No analytics or third-party contact form is configured.
 
----
+## Hosting
 
----
+The live portfolio is published at **https://satheesh-meadi.github.io/Satheesh-Meadi/**.
 
-## Fun Fact
-<p align="center">
-  <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" width="220" alt="Fun Gif">
-</p>
+Pushing to `main` runs `.github/workflows/pages.yml`: validate the portfolio, package `index.html` with `styles/`, `scripts/`, `images/`, `assets/`, and `vendor/`, then deploy to GitHub Pages. Repository documentation, provenance records, and preparation tools are excluded from the website artifact. Pages uses GitHub Actions as its publishing source. The site supports both a domain root and a repository subpath through relative asset URLs. Local preview does not publish changes.
 
-I once built a data pipeline just to analyze how much coffee I drink during debugging sessions. Turns out the pipeline processed more coffee than data.
+## Connect
 
----
-
-## Quote
-_"The best way to predict the future is to invent it."_ - Alan Kay
-
-<p align="center">
-  <img src="https://media.giphy.com/media/QZkpIdieotn3i/giphy.gif" width="300" alt="Quote Gif">
-</p>
-
-
-
-
-## Connect with Me
-<p align="center">
-  <a href="https://www.linkedin.com/in/satheesh-meadi/">
-    <img src="https://img.shields.io/badge/LinkedIn-006699?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-  <a href="mailto:satheeshm1202@gmail.com">
-    <img src="https://img.shields.io/badge/Email-8F4D33?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-  <a href="https://leetcode.com/Satheesh_Meadi/">
-    <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" />
-  </a>
-  <a href="https://github.com/SATHEESH-MEADI">
-    <img src="https://img.shields.io/badge/GitHub-111111?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-</p>
+- [GitHub](https://github.com/SATHEESH-MEADI)
+- [LinkedIn](https://www.linkedin.com/in/satheesh-meadi/)
+- [Email](mailto:satheesh.meadi@okstate.edu)
