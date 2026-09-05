@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-labelledby="title desc">
+  <title id="title">Satheesh Meadi — Intelligence, rooted in the field.</title>
+  <desc id="desc">Forest green and ivory profile banner with orange accents and an illustrated agricultural sensor field.</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#c8d5b1" stroke-opacity=".06"/></pattern>
+    <linearGradient id="soil" x2="0" y2="1"><stop stop-color="#78543e"/><stop offset="1" stop-color="#382d23"/></linearGradient>
+  </defs>
+  <rect width="1280" height="420" rx="16" fill="#122b22"/>
+  <rect width="1280" height="420" rx="16" fill="url(#grid)"/>
+  <rect x="52" y="48" width="36" height="4" rx="2" fill="#fe5c00"/>
+  <text x="103" y="55" font-family="Arial, sans-serif" font-size="13" letter-spacing="3" fill="#d5dfc4">RESEARCH WITH ROOTS</text>
+  <text x="52" y="137" font-family="Arial, sans-serif" font-weight="700" font-size="58" letter-spacing="-2" fill="#f6f3e8">Satheesh Meadi</text>
+  <text x="52" y="207" font-family="Georgia, serif" font-size="43" fill="#f6f3e8">Intelligence,</text>
+  <text x="52" y="260" font-family="Georgia, serif" font-style="italic" font-size="43" fill="#c8d5b1">rooted in the field.</text>
+  <text x="52" y="318" font-family="Arial, sans-serif" font-size="16" fill="#d5dfc4">Agricultural water · Geospatial intelligence · Applied AI</text>
+  <path d="M52 350H640" stroke="#c8d5b1" stroke-opacity=".25"/>
+  <text x="52" y="379" font-family="Arial, sans-serif" font-size="12" letter-spacing="2" fill="#c8d5b1">OKLAHOMA STATE UNIVERSITY</text>
+  <g transform="translate(765 35)">
+    <ellipse cx="213" cy="305" rx="207" ry="28" fill="#071b13" opacity=".65"/>
+    <path d="M10 204 208 104 417 198 219 305Z" fill="#284b31"/>
+    <path d="M10 204 219 305V343L10 242Z" fill="url(#soil)"/>
+    <path d="M219 305 417 198V236L219 343Z" fill="#513d2a"/>
+    <g stroke="#81a36a" stroke-width="12" stroke-linecap="round">
+      <path d="M49 200 213 121M81 216 245 137M114 232 278 153M147 248 311 169M180 264 344 185M213 280 377 201"/>
+    </g>
+    <g stroke="#bdd09a" stroke-width="3" stroke-linecap="round" opacity=".7">
+      <path d="M49 196 213 117M81 212 245 133M114 228 278 149M147 244 311 165M180 260 344 181M213 276 377 197"/>
+    </g>
+    <path d="M281 201V73H251" stroke="#e8e6d9" stroke-width="5" fill="none"/>
+    <rect x="237" y="65" width="23" height="15" rx="4" fill="#fe5c00"/>
+    <path d="m247 86-30 52h61Z" fill="#fe5c00" opacity=".12"/>
+    <circle cx="281" cy="50" r="5" fill="#fe5c00"/>
+    <path d="M265 37q16-15 32 0M255 26q26-25 52 0" fill="none" stroke="#fe5c00" stroke-width="2" stroke-linecap="round"/>
+    <text x="80" y="370" font-family="Arial, sans-serif" font-size="11" letter-spacing="3" fill="#c8d5b1">FIELD → DATA → DECISIONS</text>
+  </g>
+</svg>

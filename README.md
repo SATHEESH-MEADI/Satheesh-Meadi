@@ -1,65 +1,110 @@
-# Satheesh Meadi
+<p align="center">
+  <img src="docs/profile/banner.svg" width="100%" alt="Satheesh Meadi — Intelligence, rooted in the field. Agricultural water, geospatial intelligence, and applied AI." />
+</p>
 
-PhD researcher in Biosystems & Agricultural Engineering at Oklahoma State University, connecting agricultural water management, geospatial analytics, and applied AI.
+<p align="center">
+  <strong>PhD Researcher · Data Scientist · Field Practitioner</strong><br />
+  Biosystems &amp; Agricultural Engineering · Oklahoma State University<br />
+  Irrigation Research Laboratory · Stillwater, Oklahoma
+</p>
 
-This repository contains my personal research portfolio: a custom 3D agricultural field, research and software projects, publications, education, and a photographic fieldwork journal.
+<p align="center">
+  <a href="https://satheesh-meadi.github.io/Satheesh-Meadi/"><strong>Explore my portfolio ↗</strong></a>
+  &nbsp; · &nbsp; <a href="assets/Satheesh-Meadi-CV.pdf">Read my CV</a>
+  &nbsp; · &nbsp; <a href="https://www.linkedin.com/in/satheesh-meadi/">LinkedIn</a>
+  &nbsp; · &nbsp; <a href="mailto:satheesh.meadi@okstate.edu">Email</a>
+</p>
 
-## Preview locally
+---
 
-With Node.js 20 or newer:
+## A computer scientist. Agriculture at heart.
 
-```sh
-npm start
-```
+<table>
+  <tr>
+    <td width="32%" align="center" valign="middle">
+      <img src="images/portrait.webp" width="290" alt="Professional portrait of Satheesh Meadi in a navy blazer" />
+      <br /><sub>Based in Stillwater, Oklahoma</sub>
+    </td>
+    <td width="68%" valign="middle">
+      <p>I’m Satheesh. I connect agricultural science and applied AI to understand crop water needs and turn field data into better decisions.</p>
+      <p>My path began in computer science, continued through a master’s in data science at UMBC, and brought me to agricultural research at Oklahoma State.</p>
+      <p>I enjoy the whole process: wiring a sensor, questioning a measurement, building a model, and explaining what it means to someone who can use it.</p>
+      <p><strong>Currently exploring:</strong> canopy temperature, atmospheric humidity, irrigation estimation, and the data systems that support this research.</p>
+    </td>
+  </tr>
+</table>
 
-Open http://127.0.0.1:4173. There are no npm dependencies to install and no build step. The development server serves only website asset directories and listens on the local machine.
+## What I’m working on
 
-To use another port, set the `PORT` environment variable. A standard static server also works, for example `python -m http.server 4173 --bind 127.0.0.1`.
+| 🌱 Canopy temperature | ☁️ Atmosphere & water | 🛰️ Geospatial intelligence |
+| :--- | :--- | :--- |
+| Estimating height-adjusted canopy temperature from fixed sensors and weather measurements. | Investigating how relative humidity affects canopy-temperature-based irrigation decisions. | Combining OpenET, vegetation indices, precipitation, and reference ET to estimate irrigation requirements. |
+| **OLS · Random Forest · LightGBM** | **Weather data · Irrigation scheduling** | **Google Earth Engine · OpenET · Python** |
 
-## Validate
+[Explore the questions behind my research →](https://satheesh-meadi.github.io/Satheesh-Meadi/#research)
 
-```sh
-npm run check
-```
+## Good science gets its boots dusty.
 
-Checks local links, image files, section IDs, project detail references, and fieldwork counts against the reviewed source records. Browser QA covered desktop, tablet and phone layouts, the 3D layer buttons, regional filters, date selection, project dialogs, navigation, and the seven-frame season slider. See `docs/qa.md` for the recorded checks and limitations.
+Installing sensors, checking measurements, and working with growers keep my research connected to the field. Here is a documented part of my **June–August 2026** season.
 
-## Edit the site
+<table>
+  <tr>
+    <td width="33%" align="center"><h3>11</h3>Fieldwork dates</td>
+    <td width="34%" align="center"><h3>36</h3>Individual site visits</td>
+    <td width="33%" align="center"><h3>3</h3>Oklahoma field regions</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="images/fieldwork/season-2026-06-30.webp" width="300" alt="Cotton rows at Caddo Research Station on June 30, 2026" /><br /><strong>Caddo</strong><br /><sub>Cotton canopy monitoring · June 30</sub></td>
+    <td align="center"><img src="images/fieldwork/altus-2026-06-30.webp" width="300" alt="Altus cotton monitoring site on June 30, 2026" /><br /><strong>Altus</strong><br /><sub>Cotton field monitoring · June 30</sub></td>
+    <td align="center"><img src="images/fieldwork/panhandle-sorghum.webp" width="300" alt="Panhandle sorghum field on July 10, 2026" /><br /><strong>Panhandle</strong><br /><sub>Sorghum fieldwork · July 10</sub></td>
+  </tr>
+</table>
 
-| File | Purpose |
-| --- | --- |
-| `index.html` | Profile, research, publications, education, and semantic page structure |
-| `styles/main.css` | Responsive design, typography, colors, and layouts |
-| `scripts/content.js` | Dated field visits and project detail copy |
-| `scripts/main.js` | Navigation, filters, dialogs, season slider, and 3D loading |
-| `scripts/scene.js` | Procedural Three.js crop field and sensor illustration |
-| `images/fieldwork/` | Optimized copies of selected field photographs |
-| `assets/Satheesh-Meadi-CV.pdf` | Supplied July 22, 2026 CV |
-| `docs/content-provenance.md` | Content sources, counting rules, and scope |
-| `docs/asset-provenance.json` | Photo sources and hashes of original files |
+<sub>Counts reflect supplied field notes naming me among the visitors. One travel date can include several site visits; this is a portion of my fieldwork history.</sub>
 
-### Fieldwork data
+**[Open the interactive field journal →](https://satheesh-meadi.github.io/Satheesh-Meadi/#fieldwork)**
 
-The current journal contains **11 distinct fieldwork dates and 36 site visits**, June–August 2026, across Caddo, Altus, and Panhandle PDS. Only field-note attendance lists naming Satheesh are included. Multiple site visits on one date are not counted as multiple travel dates. These records do not represent the full eight-month fieldwork history.
+## Beyond the field: selected software
 
-`tools/prepare_assets.py` regenerates WebP derivatives using Pillow, given `--field-root` pointing to the original `2026 Field Trips` directory. It reads and hash-checks the sources, never edits them. Original notes, raw datasets, and photographs remain outside this repository. Network-drive access is not required to run the website.
+| Project | What I built | Tools & methods |
+| :--- | :--- | :--- |
+| **[Medi-Text Summarizer](https://github.com/SATHEESH-MEADI/Medical-Text-Analysis-System)** | Medical-text summarization, entity recognition, and multilingual question answering. | Transformers · NLP · Streamlit |
+| **[Financial Risk Pipeline](https://github.com/SATHEESH-MEADI/Real_Time_Financial_Risk_Dashboard)** | Market-data ingestion, CAPM analytics, and portfolio dashboards. | Airflow · Snowflake · PostgreSQL |
+| **[Dribble, Predict, Win](https://github.com/SATHEESH-MEADI/NBA-Game-Forecast)** | Basketball outcome forecasting with data pipelines and model drift monitoring. | PySpark · Machine learning |
 
-### Graphics and accessibility
+## My working toolkit
 
-The About portrait uses professional shot `satheesh-meadi-260324-0016.jpg`. `tools/prepare_portrait.py --source <original-file>` creates its optimized web copy and source-hash record without altering the original. Portrait preparation is separate from field-photo preparation.
+**Research & geospatial** &nbsp; Python · Google Earth Engine · OpenET · Environmental data<br />
+**Models & language** &nbsp; Machine learning · LightGBM · Hugging Face · NLP<br />
+**Data & systems** &nbsp; SQL · PySpark · Airflow · PostgreSQL · Snowflake · Cloud platforms
 
-Three.js **0.180.0** is vendored locally with its MIT license. The scene renders on interaction or resize rather than running a perpetual animation loop, pauses rendering offscreen, and caps device pixel ratio. Reduced-motion and data-saving preferences use the static SVG illustration. Unsupported WebGL also retains that illustration. The decorative scene is separate from the accessible layer controls and explanatory text.
+## The path so far
 
-Other features include a skip link, native modal dialogs, keyboard controls, visible focus states, responsive navigation, labeled photography, and lazy-loaded images. Google Fonts supplies DM Sans and Instrument Serif with local system-font fallbacks. No analytics or third-party contact form is configured.
+| When | Where | Focus |
+| :--- | :--- | :--- |
+| **2026–present** | **Oklahoma State University** | PhD in Biosystems & Agricultural Engineering · Graduate Research Assistant |
+| **2023–2025** | **University of Maryland, Baltimore County** | MS in Data Science · Graduate Assistant · Math Tutor |
+| **2019–2023** | **Mohan Babu University** | BTech in Computer Science |
 
-## Hosting
+Along the way: **AI Research Fellow at Handshake MOVE** (August–December 2025) and **Graduate Engineer Intern at LTIMindtree** (January–August 2023).
 
-The live portfolio is published at **https://satheesh-meadi.github.io/Satheesh-Meadi/**.
+## Research, shared.
 
-Pushing to `main` runs `.github/workflows/pages.yml`: validate the portfolio, package `index.html` with `styles/`, `scripts/`, `images/`, `assets/`, and `vendor/`, then deploy to GitHub Pages. Repository documentation, provenance records, and preparation tools are excluded from the website artifact. Pages uses GitHub Actions as its publishing source. The site supports both a domain root and a repository subpath through relative asset URLs. Local preview does not publish changes.
+- **2026 · IEEE DCAS** — [Canopy Temperature Sensor Data Optimization for Irrigation Scheduling](https://doi.org/10.1109/DCAS69364.2026.11545108)
+- **2023 · Journal of Survey in Fisheries Sciences** — [Stock Price Prediction by Normalizing LSTM and GRU Models](https://www.researchgate.net/publication/383870856_View_of_Stock_Price_Prediction_by_Normalizing_LSTM_and_GRU_Models)
+- **2022 · Journal of Pharmaceutical Negative Results** — [Extreme Learning Mechanism for Classification & Prediction of Soil Fertility Index](https://www.pnrjournal.com/index.php/home/article/view/1622)
 
-## Connect
+[Publications and conference contributions →](https://satheesh-meadi.github.io/Satheesh-Meadi/#publications)
 
-- [GitHub](https://github.com/SATHEESH-MEADI)
-- [LinkedIn](https://www.linkedin.com/in/satheesh-meadi/)
-- [Email](mailto:satheesh.meadi@okstate.edu)
+---
+
+<p align="center">
+  <strong>Have a question worth exploring?</strong><br />
+  I’m interested in agricultural water, useful AI, and research that reaches beyond the screen.
+</p>
+
+<p align="center">
+  <a href="mailto:satheesh.meadi@okstate.edu">Let’s connect</a>
+  &nbsp; · &nbsp; <a href="https://satheesh-meadi.github.io/Satheesh-Meadi/">Visit my portfolio</a>
+  &nbsp; · &nbsp; <a href="https://www.linkedin.com/in/satheesh-meadi/">Find me on LinkedIn</a>
+</p>
