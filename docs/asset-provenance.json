@@ -118,5 +118,233 @@
     "asset": "images/fieldwork/altus-2026-08-19.webp",
     "source_relative_to_field_trips": "2026_Altus/Muller Merrit River/Photos/2026-08-19/Field_Overview.jpg",
     "source_sha256": "06d787cb723779ffe7f3c3d660beab0f16feb329ef36ae10498bba97f4fed8ce"
+  },
+  {
+    "asset": "images/field/cotton-thumbs-up-768.webp",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file cotton-thumbs-up.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "d58c051b68ec9df69f6904211dffce803f8f1d9f23bf4b5873c4a4f7ec5c6f8f",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/cotton-thumbs-up-768.avif",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file cotton-thumbs-up.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "d58c051b68ec9df69f6904211dffce803f8f1d9f23bf4b5873c4a4f7ec5c6f8f",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/cotton-thumbs-up-1280.webp",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file cotton-thumbs-up.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "d58c051b68ec9df69f6904211dffce803f8f1d9f23bf4b5873c4a4f7ec5c6f8f",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/cotton-thumbs-up-1280.avif",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file cotton-thumbs-up.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "d58c051b68ec9df69f6904211dffce803f8f1d9f23bf4b5873c4a4f7ec5c6f8f",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/cotton-thumbs-up-1920.webp",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file cotton-thumbs-up.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "d58c051b68ec9df69f6904211dffce803f8f1d9f23bf4b5873c4a4f7ec5c6f8f",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/cotton-thumbs-up-1920.avif",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file cotton-thumbs-up.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "d58c051b68ec9df69f6904211dffce803f8f1d9f23bf4b5873c4a4f7ec5c6f8f",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/cotton-thumbs-up-2576.webp",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file cotton-thumbs-up.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "d58c051b68ec9df69f6904211dffce803f8f1d9f23bf4b5873c4a4f7ec5c6f8f",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/cotton-thumbs-up-2576.avif",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file cotton-thumbs-up.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "d58c051b68ec9df69f6904211dffce803f8f1d9f23bf4b5873c4a4f7ec5c6f8f",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/cotton-sensor-work-768.webp",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file cotton-sensor-work.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "927d5b9c8af2c7085ed924ea2e090e7eef83fcf92f1f2b259a65734b72aaf194",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/cotton-sensor-work-768.avif",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file cotton-sensor-work.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "927d5b9c8af2c7085ed924ea2e090e7eef83fcf92f1f2b259a65734b72aaf194",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/cotton-sensor-work-1280.webp",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file cotton-sensor-work.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "927d5b9c8af2c7085ed924ea2e090e7eef83fcf92f1f2b259a65734b72aaf194",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/cotton-sensor-work-1280.avif",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file cotton-sensor-work.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "927d5b9c8af2c7085ed924ea2e090e7eef83fcf92f1f2b259a65734b72aaf194",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/cotton-sensor-work-1920.webp",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file cotton-sensor-work.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "927d5b9c8af2c7085ed924ea2e090e7eef83fcf92f1f2b259a65734b72aaf194",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/cotton-sensor-work-1920.avif",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file cotton-sensor-work.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "927d5b9c8af2c7085ed924ea2e090e7eef83fcf92f1f2b259a65734b72aaf194",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/team-corn-pivot-1-768.webp",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file team-corn-pivot-1.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "aaadfc24bf096c2026fa22957862cab702cabefd2cd85572f6f4818b5c6f447c",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/team-corn-pivot-1-768.avif",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file team-corn-pivot-1.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "aaadfc24bf096c2026fa22957862cab702cabefd2cd85572f6f4818b5c6f447c",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/team-corn-pivot-1-1280.webp",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file team-corn-pivot-1.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "aaadfc24bf096c2026fa22957862cab702cabefd2cd85572f6f4818b5c6f447c",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/team-corn-pivot-1-1280.avif",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file team-corn-pivot-1.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "aaadfc24bf096c2026fa22957862cab702cabefd2cd85572f6f4818b5c6f447c",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/team-corn-pivot-1-1920.webp",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file team-corn-pivot-1.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "aaadfc24bf096c2026fa22957862cab702cabefd2cd85572f6f4818b5c6f447c",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/team-corn-pivot-1-1920.avif",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file team-corn-pivot-1.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "aaadfc24bf096c2026fa22957862cab702cabefd2cd85572f6f4818b5c6f447c",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/cotton-field-wide-768.webp",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file cotton-field-wide.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "ca8d3500fe14f24f3ddf84415be17877846a846897d47c4dcae75a0ccc77f08b",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/cotton-field-wide-768.avif",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file cotton-field-wide.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "ca8d3500fe14f24f3ddf84415be17877846a846897d47c4dcae75a0ccc77f08b",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/cotton-field-wide-1280.webp",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file cotton-field-wide.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "ca8d3500fe14f24f3ddf84415be17877846a846897d47c4dcae75a0ccc77f08b",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/cotton-field-wide-1280.avif",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file cotton-field-wide.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "ca8d3500fe14f24f3ddf84415be17877846a846897d47c4dcae75a0ccc77f08b",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/cotton-field-wide-1920.webp",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file cotton-field-wide.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "ca8d3500fe14f24f3ddf84415be17877846a846897d47c4dcae75a0ccc77f08b",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/cotton-field-wide-1920.avif",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file cotton-field-wide.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "ca8d3500fe14f24f3ddf84415be17877846a846897d47c4dcae75a0ccc77f08b",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/cotton-pointing-768.webp",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file cotton-pointing.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "3d86c66072112279a1fdf19e498a418d2e728debf9dc28e76b02fd56f60f6b62",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/cotton-pointing-768.avif",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file cotton-pointing.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "3d86c66072112279a1fdf19e498a418d2e728debf9dc28e76b02fd56f60f6b62",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/cotton-pointing-1280.webp",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file cotton-pointing.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "3d86c66072112279a1fdf19e498a418d2e728debf9dc28e76b02fd56f60f6b62",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/cotton-pointing-1280.avif",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file cotton-pointing.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "3d86c66072112279a1fdf19e498a418d2e728debf9dc28e76b02fd56f60f6b62",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/cotton-pointing-1920.webp",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file cotton-pointing.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "3d86c66072112279a1fdf19e498a418d2e728debf9dc28e76b02fd56f60f6b62",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/cotton-pointing-1920.avif",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file cotton-pointing.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "3d86c66072112279a1fdf19e498a418d2e728debf9dc28e76b02fd56f60f6b62",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/team-corn-pivot-2-768.webp",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file team-corn-pivot-2.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "f27685ad10b162f16dc8e5a2a306c8f30472af9e6d0927efcbfff46e74b5be48",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/team-corn-pivot-2-768.avif",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file team-corn-pivot-2.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "f27685ad10b162f16dc8e5a2a306c8f30472af9e6d0927efcbfff46e74b5be48",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/team-corn-pivot-2-1280.webp",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file team-corn-pivot-2.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "f27685ad10b162f16dc8e5a2a306c8f30472af9e6d0927efcbfff46e74b5be48",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/team-corn-pivot-2-1280.avif",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file team-corn-pivot-2.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "f27685ad10b162f16dc8e5a2a306c8f30472af9e6d0927efcbfff46e74b5be48",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/team-corn-pivot-2-1920.webp",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file team-corn-pivot-2.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "f27685ad10b162f16dc8e5a2a306c8f30472af9e6d0927efcbfff46e74b5be48",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
+  },
+  {
+    "asset": "images/field/team-corn-pivot-2-1920.avif",
+    "source": "Photograph supplied by Satheesh Meadi (2026 season); original file team-corn-pivot-2.jpg kept outside the repository in .local/photos/originals",
+    "source_sha256": "f27685ad10b162f16dc8e5a2a306c8f30472af9e6d0927efcbfff46e74b5be48",
+    "processing": "EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF/WebP export; no retouching of content"
   }
 ]

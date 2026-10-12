@@ -190,7 +190,7 @@ export function createFieldScene(canvas, container) {
     const { width, height } = container.getBoundingClientRect();
     if (!width || !height) return;
     const aspect = width / height,
-      span = 4.05;
+      span = 3.45;
     camera.left = -span * aspect;
     camera.right = span * aspect;
     camera.top = span;
@@ -217,14 +217,13 @@ export function createFieldScene(canvas, container) {
     (event) => {
       if (motion.matches || event.pointerType === 'touch') return;
       const r = container.getBoundingClientRect();
-      target = -0.13 + ((event.clientX - r.left) / r.width - 0.5) * 0.32;
-      field.rotation.y = target;
+      field.rotation.y = target + ((event.clientX - r.left) / r.width - 0.5) * 0.32;
       requestRender();
     },
     { passive: true },
   );
   container.addEventListener('pointerleave', () => {
-    field.rotation.y = -0.13;
+    field.rotation.y = target;
     requestRender();
   });
   motion.addEventListener('change', () => {
@@ -243,6 +242,11 @@ export function createFieldScene(canvas, container) {
   renderer.render(scene, camera);
   canvas.classList.add('ready');
   return {
+    setRotation(angle) {
+      target = angle;
+      field.rotation.y = angle;
+      requestRender();
+    },
     setLayer(layer) {
       scan.visible = layer === 'canopy';
       disk.visible = layer === 'canopy';

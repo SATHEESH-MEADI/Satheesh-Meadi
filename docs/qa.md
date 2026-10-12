@@ -1,6 +1,8 @@
 # Website verification
 
-September 5, 2026 — branch `feature/research-portfolio-fieldwork-showcase`.
+October 12, 2026, branch `develop` (redesign). See the October section at the end. The September notes below describe the previous build.
+
+September 5, 2026, branch `feature/research-portfolio-fieldwork-showcase`.
 
 ## Automated checks
 
@@ -32,3 +34,12 @@ Checked in the available Chromium-based in-app browser, using the local preview 
 - Reduced-motion, data-saving, and WebGL-unavailable paths have static fallback implementations; physical low-end-device performance and cross-browser Safari/Firefox behavior were not measured.
 - No Lighthouse score, scientific model re-evaluation, or independent validation of CV performance metrics is claimed.
 - External project links returned HTTP 200. The IEEE DOI returned HTTP 202. The nonresolving soil-paper DOI was replaced by the verified publisher article page. ResearchGate and LinkedIn remain external services and may require sign-in or restrict automated access.
+
+## October 12, 2026 (redesign)
+
+- `node tools/check_site.mjs`: passed (links, images and srcsets, preserved anchors, no em dashes, fieldwork totals, regional counts, season frames, gallery provenance, fonts and vendor files).
+- `node --check` on `scripts/main.js`, `scripts/scene.js`, `scripts/content.js`: passed.
+- Impeccable design detector (`npx impeccable detect`): remaining findings are static-analysis limits (section padding set through CSS custom properties, unitless heading line-heights) and were inspected in the rendered page.
+- Headless Chromium at 1440, 1024 and 390 pixels: no horizontal overflow, no console errors, all images load. Hero, research story (sticky model + layer switching), trip strip, map filters, season slider, gallery lightbox, project dialogs, publication tabs, mobile menu checked.
+- Reduced-motion path: reveals, hero wipe and scroll-linked effects disabled; state changes remain visible.
+- The GitHub Pages workflow now copies `fonts/` and the local preview server serves `fonts/` and `.avif`.

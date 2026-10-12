@@ -3,3 +3,9 @@ node_modules/
 __pycache__/
 *.log
 _site/
+.impeccable/
+.DS_Store
+Thumbs.db
+# Original photographs and working captures stay out of the repository.
+photos-original/
+*.psd

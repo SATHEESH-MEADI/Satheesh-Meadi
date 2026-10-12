@@ -27,7 +27,7 @@ jobs:
         run: |
           mkdir _site
           cp index.html _site/
-          cp -R styles scripts images assets vendor _site/
+          cp -R styles scripts images assets vendor fonts _site/
           touch _site/.nojekyll
       - uses: actions/upload-pages-artifact@v4
         with:

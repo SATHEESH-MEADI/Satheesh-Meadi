@@ -1,7 +1,7 @@
-// Editorial summaries of the supplied CV (July 22, 2026) and dated field notes.
+// Editorial summaries of the supplied CV and dated field notes.
 // Attendance is based only on entries naming Satheesh. See docs/content-provenance.md.
 const caddo = { name: 'Caddo Research Station', region: 'caddo' };
-const mmr = { name: 'Altus · cotton monitoring site', region: 'altus' };
+const mmr = { name: 'Altus cotton monitoring site', region: 'altus' };
 const swrec = { name: 'SWREC', region: 'altus' };
 const pan = (name) => ({ name, region: 'panhandle' });
 export const trips = [
@@ -23,7 +23,7 @@ export const trips = [
     image: 'muller-field',
     caption: 'Altus cotton field · June 30, 2026',
     summary:
-      'We installed soil-moisture probes, corrected sensor alignment, and investigated logger issues. At the Altus cotton site, I demonstrated OASIS—from account creation to adding a field—and explained how the measurements connect to irrigation decisions.',
+      'We installed soil-moisture probes, corrected sensor alignment, and investigated logger issues. At the Altus cotton site, I demonstrated OASIS, from account creation to adding a field, and explained how the measurements connect to irrigation decisions.',
   },
   {
     date: '2026-07-08',
@@ -137,9 +137,9 @@ export const trips = [
 ];
 // Region and capture date travel together; never reuse another region's photograph.
 export function tripPhoto(trip, region) {
-  if (region === 'caddo')
+  if (region === 'caddo' && trip.sites.some((s) => s.region === 'caddo'))
     return { image: `season-${trip.date}`, caption: 'Caddo Research Station' };
-  if (region === 'altus')
+  if (region === 'altus' && trip.sites.some((s) => s.region === 'altus'))
     return { image: `altus-${trip.date}`, caption: 'Altus cotton monitoring site' };
   return { image: trip.image, caption: trip.caption.split(' · ')[0] };
 }
@@ -152,6 +152,66 @@ export const seasonDates = [
   '2026-08-12',
   '2026-08-19',
 ];
+export const regionNames = { caddo: 'Caddo', altus: 'Altus', panhandle: 'Panhandle' };
+
+// Photographs supplied directly by Satheesh for the gallery (see docs/asset-provenance.json).
+export const gallery = [
+  {
+    file: 'cotton-thumbs-up',
+    alt: 'Satheesh giving a thumbs up in a cotton field with open bolls, beside a variety sign',
+    caption: 'Cotton at harvest stage',
+    size: 'wide',
+  },
+  {
+    file: 'cotton-sensor-work',
+    alt: 'Satheesh checking a soil-moisture sensor station among open cotton bolls',
+    caption: 'Checking the sensor station',
+    size: 'tall',
+    position: '24% 50%',
+  },
+  {
+    file: 'team-corn-pivot-1',
+    alt: 'Field team selfie beside a rain gauge in harvested corn, with a center pivot behind',
+    caption: 'The team, after a corn-field check',
+    size: 'square',
+    position: '50% 62%',
+  },
+  {
+    file: 'cotton-field-wide',
+    alt: 'Satheesh standing in rows of defoliated cotton under an overcast sky',
+    caption: 'Rows ready for the picker',
+    size: 'wide',
+  },
+  {
+    file: 'cotton-pointing',
+    alt: 'Satheesh pointing at himself in a cotton field beside a variety sign',
+    caption: 'Field day, cotton site',
+    size: 'square',
+  },
+  {
+    file: 'team-corn-pivot-2',
+    alt: 'Field team standing in corn stubble near a rain gauge and data logger',
+    caption: 'Rain gauge and logger, still reporting',
+    size: 'square',
+  },
+];
+
+export const credentials = [
+  { title: 'IEEE', detail: 'Institute of Electrical and Electronics Engineers', mono: 'MEMBER' },
+  {
+    title: 'ASABE',
+    detail: 'American Society of Agricultural and Biological Engineers',
+    mono: 'MEMBER',
+  },
+  { title: 'FE Exam', detail: 'NCEES Fundamentals of Engineering examination', mono: 'PASSED' },
+  {
+    title: 'BAE GSA',
+    detail:
+      'Social Chair, Biosystems & Agricultural Engineering Graduate Student Association, Oklahoma State University',
+    mono: 'AUG 2026 - PRESENT',
+  },
+];
+
 export const projects = {
   canopy: {
     category: 'RESEARCH / CANOPY TEMPERATURE',

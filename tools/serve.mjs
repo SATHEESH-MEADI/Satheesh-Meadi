@@ -12,6 +12,7 @@ const mime = {
   '.json': 'application/json',
   '.svg': 'image/svg+xml',
   '.webp': 'image/webp',
+  '.avif': 'image/avif',
   '.jpeg': 'image/jpeg',
   '.jpg': 'image/jpeg',
   '.pdf': 'application/pdf',
@@ -29,7 +30,7 @@ createServer(async (req, res) => {
     if (relative.split('/').some((part) => part === '..' || part === '.')) {
       throw new Error('Not found');
     }
-    if (!/^(index\.html|(?:images|styles|scripts|assets|vendor)\/[^\\]+)$/.test(relative))
+    if (!/^(index\.html|(?:images|styles|scripts|assets|vendor|fonts)\/[^\\]+)$/.test(relative))
       throw new Error('Not found');
     const file = resolve(root, relative);
     if (!file.startsWith(resolve(root) + sep) || !(await stat(file)).isFile())

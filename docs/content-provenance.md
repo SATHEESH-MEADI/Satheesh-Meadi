@@ -1,6 +1,13 @@
 # Website content provenance
 
-Reviewed September 5, 2026. Research originals were accessed read-only. Raw field notes are not included in this repository.
+Reviewed September 5, 2026; redesign and additions October 12, 2026. Research originals were accessed read-only. Raw field notes are not included in this repository.
+
+## October 2026 additions
+
+- Memberships, credentials and service were stated directly by Satheesh on October 12, 2026: IEEE member, ASABE member, NCEES FE exam passed, and BAE GSA Social Chair (Biosystems and Agricultural Engineering Graduate Student Association, Oklahoma State University) since August 2026. They are not yet in the July 22, 2026 CV copied in `assets/`; update the CV file when a newer version is supplied.
+- Six photographs in `images/field/` (cotton at harvest stage, a sensor station check, and two team photographs beside a rain gauge in harvested corn) were supplied directly by Satheesh. Captions avoid site names and dates until the matching field notes are read; `asset-provenance.json` records the SHA-256 of each original. Processing: EXIF orientation, gentle levels and tone curve, mild saturation, unsharp mask, proportional resize, AVIF and WebP export. No content retouching. Originals are kept outside the repository (`.local/photos/originals`, git-ignored).
+- Fieldwork dates and counts are unchanged from September 5 (11 dates, 36 site visits). Later 2026 visits will be added once the corresponding notes are reviewed.
+- Fonts are self-hosted: Bricolage Grotesque and Martian Mono (SIL Open Font License, licenses in `fonts/`). Animation uses the vendored Motion library (MIT, `vendor/`).
 
 ## Profile
 

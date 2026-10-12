@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/profile/banner.svg" width="100%" alt="Satheesh Meadi — Intelligence, rooted in the field. Agricultural water, geospatial intelligence, and applied AI." />
+  <img src="docs/profile/banner.svg" width="100%" alt="Satheesh Meadi. Intelligence, rooted in the field. Agricultural water, geospatial intelligence, and applied AI." />
 </p>
 
 <p align="center">
@@ -15,7 +15,10 @@
   &nbsp; · &nbsp; <a href="mailto:satheesh.meadi@okstate.edu">Email</a>
 </p>
 
----
+<p align="center">
+  <img src="images/field/cotton-thumbs-up-1280.webp" width="100%" alt="Satheesh Meadi standing in a cotton field at harvest stage, 2026 season" />
+  <br /><sub>Cotton at harvest, Oklahoma, 2026 season</sub>
+</p>
 
 ## A computer scientist. Agriculture at heart.
 
@@ -34,6 +37,14 @@
   </tr>
 </table>
 
+## Memberships, credentials and service
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| **IEEE**<br /><sub>Member</sub> | **ASABE**<br /><sub>Member, American Society of Agricultural and Biological Engineers</sub> | **FE Exam**<br /><sub>NCEES Fundamentals of Engineering, passed</sub> | **BAE GSA Social Chair**<br /><sub>Biosystems &amp; Agricultural Engineering Graduate Student Association, OSU · Aug 2026 to present</sub> |
+
+Also serving on the **Doctoral Admissions Panel**, OSU Biosystems &amp; Agricultural Engineering (2026).
+
 ## What I’m working on
 
 | 🌱 Canopy temperature | ☁️ Atmosphere & water | 🛰️ Geospatial intelligence |
@@ -45,7 +56,7 @@
 
 ## Good science gets its boots dusty.
 
-Installing sensors, checking measurements, and working with growers keep my research connected to the field. Here is a documented part of my **June–August 2026** season.
+Installing sensors, checking measurements, and working with growers keep my research connected to the field. Here is a documented part of my **June to August 2026** season.
 
 <table>
   <tr>
@@ -58,11 +69,16 @@ Installing sensors, checking measurements, and working with growers keep my rese
     <td align="center"><img src="images/fieldwork/altus-2026-06-30.webp" width="300" alt="Altus cotton monitoring site on June 30, 2026" /><br /><strong>Altus</strong><br /><sub>Cotton field monitoring · June 30</sub></td>
     <td align="center"><img src="images/fieldwork/panhandle-sorghum.webp" width="300" alt="Panhandle sorghum field on July 10, 2026" /><br /><strong>Panhandle</strong><br /><sub>Sorghum fieldwork · July 10</sub></td>
   </tr>
+  <tr>
+    <td align="center"><img src="images/field/cotton-sensor-work-768.webp" width="300" alt="Satheesh checking a soil-moisture sensor station among open cotton bolls" /><br /><strong>Cotton at harvest</strong><br /><sub>Checking the sensor station</sub></td>
+    <td align="center"><img src="images/field/team-corn-pivot-1-768.webp" width="300" alt="Field team selfie beside a rain gauge in harvested corn, with a center pivot behind" /><br /><strong>The team</strong><br /><sub>After a corn-field check</sub></td>
+    <td align="center"><img src="images/field/cotton-field-wide-768.webp" width="300" alt="Satheesh standing in rows of defoliated cotton under an overcast sky" /><br /><strong>Rows ready for the picker</strong><br /><sub>2026 season</sub></td>
+  </tr>
 </table>
 
 <sub>Counts reflect supplied field notes naming me among the visitors. One travel date can include several site visits; this is a portion of my fieldwork history.</sub>
 
-**[Open the interactive field journal →](https://satheesh-meadi.github.io/Satheesh-Meadi/#fieldwork)**
+**[Open the interactive field journal →](https://satheesh-meadi.github.io/Satheesh-Meadi/#fieldwork)** · **[See the gallery →](https://satheesh-meadi.github.io/Satheesh-Meadi/#gallery)**
 
 ## Beyond the field: selected software
 
@@ -82,17 +98,19 @@ Installing sensors, checking measurements, and working with growers keep my rese
 
 | When | Where | Focus |
 | :--- | :--- | :--- |
-| **2026–present** | **Oklahoma State University** | PhD in Biosystems & Agricultural Engineering · Graduate Research Assistant |
-| **2023–2025** | **University of Maryland, Baltimore County** | MS in Data Science · Graduate Assistant · Math Tutor |
-| **2019–2023** | **Mohan Babu University** | BTech in Computer Science |
+| **2026 to present** | **Oklahoma State University** | PhD in Biosystems & Agricultural Engineering · Graduate Research Assistant |
+| **2023 to 2025** | **University of Maryland, Baltimore County** | MS in Data Science · Graduate Assistant · Math Tutor |
+| **2019 to 2023** | **Mohan Babu University** | BTech in Computer Science |
 
-Along the way: **AI Research Fellow at Handshake MOVE** (August–December 2025) and **Graduate Engineer Intern at LTIMindtree** (January–August 2023).
+Along the way: **AI Research Fellow at Handshake MOVE** (August to December 2025) and **Graduate Engineer Intern at LTIMindtree** (January to August 2023).
 
 ## Research, shared.
 
-- **2026 · IEEE DCAS** — [Canopy Temperature Sensor Data Optimization for Irrigation Scheduling](https://doi.org/10.1109/DCAS69364.2026.11545108)
-- **2023 · Journal of Survey in Fisheries Sciences** — [Stock Price Prediction by Normalizing LSTM and GRU Models](https://www.researchgate.net/publication/383870856_View_of_Stock_Price_Prediction_by_Normalizing_LSTM_and_GRU_Models)
-- **2022 · Journal of Pharmaceutical Negative Results** — [Extreme Learning Mechanism for Classification & Prediction of Soil Fertility Index](https://www.pnrjournal.com/index.php/home/article/view/1622)
+- **2026 · IEEE DCAS** · [Canopy Temperature Sensor Data Optimization for Irrigation Scheduling](https://doi.org/10.1109/DCAS69364.2026.11545108)
+- **2023 · Journal of Survey in Fisheries Sciences** · [Stock Price Prediction by Normalizing LSTM and GRU Models](https://www.researchgate.net/publication/383870856_View_of_Stock_Price_Prediction_by_Normalizing_LSTM_and_GRU_Models)
+- **2022 · Journal of Pharmaceutical Negative Results** · [Extreme Learning Mechanism for Classification & Prediction of Soil Fertility Index](https://www.pnrjournal.com/index.php/home/article/view/1622)
+
+Six oral conference contributions in 2026, including five at the ASABE Annual International Meeting in Indianapolis.
 
 [Publications and conference contributions →](https://satheesh-meadi.github.io/Satheesh-Meadi/#publications)
 
@@ -104,7 +122,13 @@ Along the way: **AI Research Fellow at Handshake MOVE** (August–December 2025)
 </p>
 
 <p align="center">
-  <a href="mailto:satheesh.meadi@okstate.edu">Let’s connect</a>
+  <a href="mailto:satheesh.meadi@okstate.edu">Say hello</a>
   &nbsp; · &nbsp; <a href="https://satheesh-meadi.github.io/Satheesh-Meadi/">Visit my portfolio</a>
   &nbsp; · &nbsp; <a href="https://www.linkedin.com/in/satheesh-meadi/">Find me on LinkedIn</a>
 </p>
+
+<details>
+<summary><sub>About this repository</sub></summary>
+
+<sub>This repository is both my GitHub profile and the source of my portfolio website, published with GitHub Pages from <code>main</code>. Run <code>npm start</code> for a local preview and <code>npm run check</code> to validate links, images, fieldwork counts and provenance. Design decisions live in <code>DESIGN.md</code>; content sources are documented in <code>docs/content-provenance.md</code>.</sub>
+</details>
