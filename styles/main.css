@@ -567,8 +567,13 @@ html.no-motion [data-words] .w {
   padding-bottom: clamp(64px, 10vh, 120px);
 }
 .hero-kicker {
-  color: rgba(243, 241, 232, 0.8);
-  margin-bottom: 22px;
+  display: inline-block;
+  background: var(--orange);
+  color: var(--loam);
+  font-weight: 560;
+  padding: 9px 14px;
+  border-radius: 4px;
+  margin-bottom: 24px;
 }
 .hero h1 {
   font-size: clamp(2.9rem, 8vw, 6.8rem);
