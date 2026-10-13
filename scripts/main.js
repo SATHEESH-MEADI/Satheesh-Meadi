@@ -4,7 +4,9 @@ import {
   projects,
   tripPhoto,
   gallery,
-  credentials,
+  service,
+  skills,
+  tools,
   regionNames,
 } from './content.js';
 
@@ -22,20 +24,65 @@ const dateLabel = (date) =>
     year: 'numeric',
     timeZone: 'UTC',
   }).format(new Date(date + 'T12:00:00Z'));
+const shortDate = (date) =>
+  new Intl.DateTimeFormat('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'UTC',
+  })
+    .format(new Date(date + 'T12:00:00Z'))
+    .toUpperCase();
 const monthLabel = (date) =>
   new Intl.DateTimeFormat('en-US', { month: 'short', timeZone: 'UTC' })
     .format(new Date(date + 'T12:00:00Z'))
     .toUpperCase();
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
 const EASE = [0.16, 1, 0.3, 1];
+const NAV_H = 72;
+const html = document.documentElement;
 
-// Motion (vendored, MIT). The page is fully usable if it fails to load.
+// Vendored libraries (MIT). The page stays fully usable if either fails to load.
 let motion = null;
+let lenis = null;
 try {
   motion = await import('../vendor/motion.min.js');
 } catch (error) {
-  console.info('Motion library unavailable, CSS fallbacks active:', error.message);
+  console.info('Motion unavailable, CSS fallbacks active:', error.message);
 }
+if (!reduceMotion.matches) {
+  try {
+    const { Lenis } = await import('../vendor/lenis.min.js');
+    lenis = new Lenis({ lerp: 0.09, wheelMultiplier: 1, smoothWheel: true, touchMultiplier: 1.4 });
+    const raf = (time) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
+    requestAnimationFrame(raf);
+  } catch (error) {
+    console.info('Smooth scrolling unavailable:', error.message);
+  }
+}
+if (reduceMotion.matches) html.classList.add('no-motion');
+
+function scrollToTarget(target, immediate = false) {
+  const el = typeof target === 'string' ? $(target) : target;
+  if (!el) return;
+  if (lenis && !immediate)
+    lenis.scrollTo(el, { offset: 0, duration: 1.3, easing: (t) => 1 - Math.pow(1 - t, 4) }); // scroll-padding-top supplies the header offset
+  else el.scrollIntoView({ behavior: reduceMotion.matches ? 'instant' : 'smooth', block: 'start' });
+}
+document.addEventListener('click', (event) => {
+  const link = event.target.closest('a[href^="#"]');
+  if (!link || link.closest('dialog')) return;
+  const target = $(link.getAttribute('href'));
+  if (!target) return;
+  event.preventDefault();
+  history.pushState(null, '', link.getAttribute('href'));
+  scrollToTarget(target);
+});
+if (location.hash && $(location.hash)) setTimeout(() => scrollToTarget(location.hash, true), 50);
 
 /* ---------- Header and navigation ---------- */
 const header = $('#site-header');
@@ -62,75 +109,122 @@ document.addEventListener('click', (event) => {
 window.matchMedia('(min-width:801px)').addEventListener('change', () => closeMenu());
 $('#year').textContent = new Date().getFullYear();
 
-// The header is transparent over the photograph and solid once the hero scrolls away.
 const hero = $('#home');
 new IntersectionObserver(
-  ([entry]) => header.classList.toggle('solid', entry.intersectionRatio < 0.9),
-  { threshold: [0.9, 1] },
+  ([entry]) => header.classList.toggle('solid', entry.intersectionRatio < 0.92),
+  {
+    threshold: [0.92, 1],
+  },
 ).observe(hero);
+// Hide the bar while reading downward, bring it back on the first upward scroll.
+let lastY = window.scrollY;
+let ticking = false;
+window.addEventListener(
+  'scroll',
+  () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const y = window.scrollY;
+      const down = y > lastY + 4 && y > window.innerHeight * 0.6;
+      const up = y < lastY - 4;
+      if (down && !navigation.classList.contains('open')) header.classList.add('hidden-up');
+      if (up || y < 80) header.classList.remove('hidden-up');
+      lastY = y;
+      ticking = false;
+    });
+  },
+  { passive: true },
+);
 
-/* ---------- Hero: the authored moment ---------- */
-const heading = $('[data-reveal-words]');
-const words = heading.textContent.trim().split(' ');
-heading.innerHTML = words
-  .map(
-    (word, i) =>
-      `<span class="w" style="opacity:0">${escapeHTML(word)}${i < words.length - 1 ? ' ' : ''}</span>`,
-  )
-  .join('');
-const wordEls = $$('.w', heading);
-function revealHero() {
-  hero.classList.add('revealed');
+/* ---------- Colour journey: the page ground follows the section in the middle of the viewport ---------- */
+const themed = $$('[data-bg]');
+{
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        html.style.setProperty('--bg', entry.target.dataset.bg);
+        html.dataset.theme = entry.target.dataset.theme || 'dark';
+        $('meta[name="theme-color"]').setAttribute('content', entry.target.dataset.bg);
+      });
+    },
+    { rootMargin: '-42% 0px -42% 0px', threshold: 0 },
+  );
+  themed.forEach((section) => io.observe(section));
+}
+
+/* ---------- Headings settle word by word; blocks rise once ---------- */
+$$('[data-words]').forEach((heading) => {
+  const words = heading.textContent.trim().split(/\s+/);
+  heading.innerHTML = words
+    .map(
+      (word, i) => `<span class="w">${escapeHTML(word)}${i < words.length - 1 ? ' ' : ''}</span>`,
+    )
+    .join('');
+});
+function revealWords(heading, startDelay = 0) {
+  if (heading.classList.contains('in')) return;
+  const words = $$('.w', heading);
   if (motion && !reduceMotion.matches) {
     motion.animate(
-      wordEls,
-      { opacity: [0, 1], y: [28, 0] },
-      { duration: 0.9, delay: motion.stagger(0.07, { startDelay: 0.35 }), ease: EASE },
+      words,
+      { opacity: [0, 1], y: ['0.55em', '0em'], filter: ['blur(6px)', 'blur(0px)'] },
+      { duration: 0.9, delay: motion.stagger(0.055, { startDelay }), ease: EASE },
     );
-  } else wordEls.forEach((w) => (w.style.opacity = '1'));
+    setTimeout(() => heading.classList.add('in'), (startDelay + 0.9 + words.length * 0.055) * 1000);
+  } else heading.classList.add('in');
+}
+function revealHero() {
+  hero.classList.add('revealed');
+  revealWords($('.hero h1'), 0.45);
   $$('.hero [data-reveal]').forEach((el) => el.classList.add('in'));
 }
 if (document.fonts?.ready) document.fonts.ready.then(revealHero);
 else revealHero();
 
-// Scroll-linked: the field recedes as the reader moves into the page.
+const revealTargets = $$('[data-reveal]').filter((el) => !el.closest('.hero'));
+const wordTargets = $$('[data-words]').filter((el) => !el.closest('.hero'));
+if (reduceMotion.matches || !('IntersectionObserver' in window)) {
+  revealTargets.forEach((el) => el.classList.add('in'));
+  wordTargets.forEach((el) => el.classList.add('in'));
+} else {
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        if (el.hasAttribute('data-words')) revealWords(el);
+        else {
+          const siblings = $$('[data-reveal]', el.parentElement);
+          const index = Math.max(0, siblings.indexOf(el));
+          el.style.transitionDelay = `${Math.min(index, 5) * 0.07}s`;
+          el.classList.add('in');
+        }
+        io.unobserve(el);
+      });
+    },
+    { rootMargin: '0px 0px -10% 0px', threshold: 0.1 },
+  );
+  [...wordTargets, ...revealTargets].forEach((el) => io.observe(el));
+}
+
+// Hero photograph recedes as the reader moves into the page.
 if (motion && !reduceMotion.matches) {
-  const media = $('.hero-media img');
   const content = $('.hero-content');
+  const stamp = $('.hero-stamp');
   motion.scroll(
     (progress) => {
-      media.style.transform = `scale(${1 + progress * 0.08})`;
-      content.style.transform = `translateY(${progress * -56}px)`;
-      content.style.opacity = String(1 - Math.min(1, progress * 1.4));
+      content.style.transform = `translateY(${progress * -70}px)`;
+      content.style.opacity = String(1 - Math.min(1, progress * 1.5));
+      stamp.style.opacity = String(1 - Math.min(1, progress * 2));
     },
     { target: hero, offset: ['start start', 'end start'] },
   );
 }
 
-/* ---------- Scroll reveals and counters ---------- */
-const revealTargets = $$('[data-reveal]').filter((el) => !el.closest('.hero'));
-if (reduceMotion.matches || !('IntersectionObserver' in window)) {
-  revealTargets.forEach((el) => el.classList.add('in'));
-} else {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        const siblings = $$('[data-reveal]', entry.target.parentElement);
-        const index = Math.max(0, siblings.indexOf(entry.target));
-        entry.target.style.transitionDelay = `${Math.min(index, 5) * 0.06}s`;
-        entry.target.classList.add('in');
-        observer.unobserve(entry.target);
-      });
-    },
-    { rootMargin: '0px 0px -8% 0px', threshold: 0.12 },
-  );
-  revealTargets.forEach((el) => observer.observe(el));
-}
-function watchCounters(root = document) {
-  const counters = $$('[data-count]', root);
-  if (!counters.length) return;
-  if (!motion || reduceMotion.matches) return;
+/* ---------- Counters, marquee and magnetic buttons ---------- */
+if (motion && !reduceMotion.matches) {
   const seen = new WeakSet();
   const io = new IntersectionObserver(
     (entries) => {
@@ -139,7 +233,7 @@ function watchCounters(root = document) {
         seen.add(entry.target);
         const target = Number(entry.target.dataset.count);
         motion.animate(0, target, {
-          duration: 1.4,
+          duration: 1.6,
           ease: EASE,
           onUpdate: (v) => (entry.target.textContent = String(Math.round(v))),
         });
@@ -148,9 +242,33 @@ function watchCounters(root = document) {
     },
     { threshold: 0.6 },
   );
-  counters.forEach((el) => io.observe(el));
+  $$('[data-count]').forEach((el) => io.observe(el));
 }
-watchCounters();
+{
+  const marquee = $('.marquee');
+  if (marquee && !reduceMotion.matches)
+    new IntersectionObserver(([entry]) => marquee.classList.toggle('live', entry.isIntersecting), {
+      threshold: 0,
+    }).observe(marquee);
+}
+if (finePointer.matches && !reduceMotion.matches) {
+  $$('[data-magnetic]').forEach((el) => {
+    let frame = 0;
+    el.addEventListener('pointermove', (event) => {
+      const r = el.getBoundingClientRect();
+      const dx = (event.clientX - (r.left + r.width / 2)) / r.width;
+      const dy = (event.clientY - (r.top + r.height / 2)) / r.height;
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        el.style.transform = `translate(${dx * 10}px, ${dy * 8}px)`;
+      });
+    });
+    el.addEventListener('pointerleave', () => {
+      cancelAnimationFrame(frame);
+      el.style.transform = '';
+    });
+  });
+}
 
 /* ---------- Research: pinned field model follows the reading position ---------- */
 const layerCopy = {
@@ -175,13 +293,7 @@ function setLayer(layer, fromScroll = false) {
 $$('[data-layer]').forEach((button) =>
   button.addEventListener('click', () => setLayer(button.dataset.layer)),
 );
-const storyMedia = window.matchMedia('(min-width: 901px)');
-function watchStory() {
-  if (!storyMedia.matches) {
-    $('.research-items').classList.remove('pinned');
-    return;
-  }
-  const items = $$('.research-item');
+if (window.matchMedia('(min-width: 901px)').matches) {
   const io = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -193,7 +305,7 @@ function watchStory() {
     },
     { rootMargin: '-45% 0px -45% 0px', threshold: 0 },
   );
-  items.forEach((item) => io.observe(item));
+  $$('.research-item').forEach((item) => io.observe(item));
   if (motion && !reduceMotion.matches) {
     motion.scroll((p) => sceneController?.setRotation(-0.13 + (p - 0.5) * 0.9), {
       target: $('.research-story'),
@@ -201,7 +313,6 @@ function watchStory() {
     });
   }
 }
-watchStory();
 async function loadScene() {
   if (reduceMotion.matches || navigator.connection?.saveData) return;
   try {
@@ -218,18 +329,15 @@ else setTimeout(loadScene, 120);
 /* ---------- Field journal ---------- */
 let selectedRegion = 'all';
 let selectedDate = trips[0].date;
-function visibleTrips() {
-  return trips.filter(
+const visibleTrips = () =>
+  trips.filter(
     (trip) => selectedRegion === 'all' || trip.sites.some((site) => site.region === selectedRegion),
   );
-}
-function activeSites(trip) {
-  return trip.sites.filter((site) => selectedRegion === 'all' || site.region === selectedRegion);
-}
+const activeSites = (trip) =>
+  trip.sites.filter((site) => selectedRegion === 'all' || site.region === selectedRegion);
 function regionLabel(trip) {
   if (selectedRegion !== 'all') return regionNames[selectedRegion];
-  const regions = [...new Set(trip.sites.map((s) => s.region))].map((r) => regionNames[r]);
-  return regions.join(' and ');
+  return [...new Set(trip.sites.map((s) => s.region))].map((r) => regionNames[r]).join(' and ');
 }
 function renderTrip() {
   const trip = trips.find((t) => t.date === selectedDate);
@@ -262,13 +370,10 @@ function renderTripList() {
     .join('');
   renderTrip();
 }
-function updateRegionCounts() {
-  $$('[data-region-dates]').forEach((el) => {
-    const region = el.dataset.regionDates;
-    const n = trips.filter((t) => t.sites.some((s) => s.region === region)).length;
-    el.textContent = `${n} ${n === 1 ? 'date' : 'dates'}`;
-  });
-}
+$$('[data-region-dates]').forEach((el) => {
+  const n = trips.filter((t) => t.sites.some((s) => s.region === el.dataset.regionDates)).length;
+  el.textContent = `${n} ${n === 1 ? 'date' : 'dates'}`;
+});
 $$('[data-region]').forEach((button) =>
   button.addEventListener('click', () => {
     selectedRegion = button.dataset.region;
@@ -289,12 +394,8 @@ $('#trip-list').addEventListener('click', (event) => {
     inline: 'nearest',
     behavior: reduceMotion.matches ? 'instant' : 'smooth',
   });
-  if (window.matchMedia('(max-width:900px)').matches && event.detail > 0) {
-    $('#trip-detail').scrollIntoView({
-      block: 'start',
-      behavior: reduceMotion.matches ? 'instant' : 'smooth',
-    });
-  }
+  if (window.matchMedia('(max-width:900px)').matches && event.detail > 0)
+    scrollToTarget($('#trip-detail'));
 });
 $('#trip-list').addEventListener('keydown', (event) => {
   if (!['ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(event.key)) return;
@@ -309,33 +410,44 @@ $('#trip-list').addEventListener('keydown', (event) => {
   buttons[next].focus();
   buttons[next].click();
 });
-updateRegionCounts();
 renderTripList();
 
-/* ---------- Season frames ---------- */
-const seasonImage = $('#season-image');
-seasonDates.forEach((date) => {
-  const img = new Image();
-  img.src = `images/fieldwork/season-${date}.webp`;
-});
-let fadeTimer;
-$('#season-range').addEventListener('input', (event) => {
-  const date = seasonDates[Number(event.target.value)];
-  const label = dateLabel(date);
-  const swap = () => {
-    seasonImage.src = `images/fieldwork/season-${date}.webp`;
-    seasonImage.alt = `Cotton field at Caddo Research Station on ${label}`;
-    seasonImage.classList.remove('fading');
-  };
-  clearTimeout(fadeTimer);
-  if (reduceMotion.matches) swap();
-  else {
-    seasonImage.classList.add('fading');
-    fadeTimer = setTimeout(swap, 160);
+/* ---------- Season: a horizontal walk through seven dated frames ---------- */
+const track = $('#season-track');
+track.innerHTML = seasonDates
+  .map(
+    (date, i) =>
+      `<figure class="season-frame"><img src="images/fieldwork/season-${date}.webp" alt="Cotton field at Caddo Research Station on ${dateLabel(date)}" width="1600" height="900" loading="lazy" decoding="async"><figcaption class="mono"><time datetime="${date}">${shortDate(date)}</time><span class="frame-index">${i + 1} of ${seasonDates.length}</span></figcaption></figure>`,
+  )
+  .join('');
+const pinMedia = window.matchMedia('(min-width: 801px)');
+function setupSeason() {
+  const pin = $('#season-pin');
+  const bar = $('#season-progress-bar');
+  if (reduceMotion.matches || !motion || !pinMedia.matches) {
+    html.classList.add('no-pin');
+    return;
   }
-  $('#season-date').textContent = label;
-  $('#season-date').dateTime = date;
-  event.target.setAttribute('aria-valuetext', label);
+  html.classList.remove('no-pin');
+  const travel = () => Math.max(0, track.scrollWidth - window.innerWidth + 0);
+  const apply = () => pin.style.setProperty('--season-travel', `${Math.round(travel() * 0.75)}px`);
+  apply();
+  new ResizeObserver(apply).observe(track);
+  motion.scroll(
+    (p) => {
+      track.style.transform = `translate3d(${-travel() * p}px, 0, 0)`;
+      bar.style.transform = `scaleX(${p})`;
+    },
+    { target: pin, offset: ['start start', 'end end'] },
+  );
+}
+setupSeason();
+track.addEventListener('keydown', (event) => {
+  if (!['ArrowRight', 'ArrowLeft'].includes(event.key)) return;
+  event.preventDefault();
+  if (html.classList.contains('no-pin'))
+    track.scrollBy({ left: event.key === 'ArrowRight' ? 400 : -400, behavior: 'smooth' });
+  else window.scrollBy({ top: event.key === 'ArrowRight' ? 320 : -320, behavior: 'smooth' });
 });
 
 /* ---------- Gallery ---------- */
@@ -345,24 +457,52 @@ const sources = (file, widths) => ({
 });
 $('#gallery-grid').innerHTML = gallery
   .map((item, i) => {
-    const s = sources(item.file, [768, 1280, 1920]);
+    const s = sources(item.file, [768, 1280, 1920, 2576]);
     const sizes =
-      item.size === 'wide'
-        ? '(max-width: 900px) 100vw, 60vw'
-        : '(max-width: 600px) 100vw, (max-width: 900px) 50vw, 30vw';
-    return `<figure class="gallery-item ${item.size}" data-reveal data-index="${i}" tabindex="0" role="button" aria-label="Open photograph: ${escapeHTML(item.caption)}"><picture><source type="image/avif" srcset="${s.avif}" sizes="${sizes}"><img src="images/field/${item.file}-1280.webp" srcset="${s.webp}" sizes="${sizes}" alt="${escapeHTML(item.alt)}" loading="lazy" decoding="async" width="1280" height="720"${item.position ? ` style="object-position:${item.position}"` : ''}></picture><figcaption>${escapeHTML(item.caption)}</figcaption></figure>`;
+      item.size === 'tall' ? '(max-width: 900px) 100vw, 42vw' : '(max-width: 900px) 100vw, 58vw';
+    return `<figure class="gallery-item ${item.size}" data-index="${i}" tabindex="0" role="button" aria-label="Open photograph: ${escapeHTML(item.caption)}"><picture><source type="image/avif" srcset="${s.avif}" sizes="${sizes}"><img src="images/field/${item.file}-1280.webp" srcset="${s.webp}" sizes="${sizes}" alt="${escapeHTML(item.alt)}" loading="lazy" decoding="async" width="1280" height="720" style="object-position:${item.position}"></picture><figcaption><span>${escapeHTML(item.caption)}</span><span class="mono">${String(i + 1).padStart(2, '0')}</span></figcaption></figure>`;
   })
   .join('');
+{
+  const tiles = $$('.gallery-item');
+  if (reduceMotion.matches || !('IntersectionObserver' in window))
+    tiles.forEach((tile) => tile.classList.add('in'));
+  else {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.style.transitionDelay = `${Number(entry.target.dataset.index) * 0.1}s`;
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        });
+      },
+      { rootMargin: '0px 0px -8% 0px', threshold: 0.1 },
+    );
+    tiles.forEach((tile) => io.observe(tile));
+    if (motion)
+      tiles.forEach((tile) => {
+        const img = $('img', tile);
+        motion.scroll((p) => img.style.setProperty('--py', `${(p - 0.5) * -14}%`), {
+          target: tile,
+          offset: ['start end', 'end start'],
+        });
+      });
+  }
+}
 const photoDialog = $('#photo-dialog');
 let photoOpener;
 function openPhoto(index) {
   const item = gallery[index];
-  const s = sources(item.file, [768, 1280, 1920]);
+  const s = sources(item.file, [768, 1280, 1920, 2576]);
   $('#photo-dialog-content').innerHTML =
-    `<picture><source type="image/avif" srcset="${s.avif}" sizes="96vw"><img src="images/field/${item.file}-1920.webp" srcset="${s.webp}" sizes="96vw" alt="${escapeHTML(item.alt)}" width="1920" height="1080"></picture>` +
+    `<picture><source type="image/avif" srcset="${s.avif}" sizes="96vw"><img src="images/field/${item.file}-1920.webp" srcset="${s.webp}" sizes="96vw" alt="${escapeHTML(item.alt)}" width="2576" height="1449"></picture>` +
     `<figcaption><span>${escapeHTML(item.caption)}</span><span class="mono">${index + 1} of ${gallery.length}</span></figcaption>`;
-  photoDialog.showModal();
-  document.body.style.overflow = 'hidden';
+  if (!photoDialog.open) {
+    photoDialog.showModal();
+    lenis?.stop();
+    document.body.style.overflow = 'hidden';
+  }
 }
 $('#gallery-grid').addEventListener('click', (event) => {
   const figure = event.target.closest('.gallery-item');
@@ -381,53 +521,54 @@ $('#gallery-grid').addEventListener('keydown', (event) => {
 photoDialog.addEventListener('keydown', (event) => {
   if (!photoOpener) return;
   const current = Number(photoOpener.dataset.index);
-  if (event.key === 'ArrowRight')
-    (openPhoto((current + 1) % gallery.length),
-      (photoOpener = $$('.gallery-item')[(current + 1) % gallery.length]));
-  if (event.key === 'ArrowLeft')
-    (openPhoto((current - 1 + gallery.length) % gallery.length),
-      (photoOpener = $$('.gallery-item')[(current - 1 + gallery.length) % gallery.length]));
+  let next = null;
+  if (event.key === 'ArrowRight') next = (current + 1) % gallery.length;
+  if (event.key === 'ArrowLeft') next = (current - 1 + gallery.length) % gallery.length;
+  if (next === null) return;
+  photoOpener = $$('.gallery-item')[next];
+  openPhoto(next);
 });
-// Newly rendered gallery tiles join the reveal observer.
-if (!reduceMotion.matches && 'IntersectionObserver' in window) {
-  const tiles = $$('.gallery-item');
-  const io = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.style.transitionDelay = `${(Number(entry.target.dataset.index) % 3) * 0.08}s`;
-        entry.target.classList.add('in');
-        io.unobserve(entry.target);
-      });
-    },
-    { rootMargin: '0px 0px -8% 0px', threshold: 0.1 },
-  );
-  tiles.forEach((tile) => io.observe(tile));
-} else $$('.gallery-item').forEach((tile) => tile.classList.add('in'));
 
-/* ---------- Credentials ---------- */
-$('#credential-list').innerHTML = credentials
+/* ---------- Skills, tools, service ---------- */
+$('#skills-grid').innerHTML = skills
   .map(
-    (c) =>
-      `<li><span class="mono">${escapeHTML(c.mono)}</span><strong>${escapeHTML(c.title)}</strong><p>${escapeHTML(c.detail)}</p></li>`,
+    (group, i) =>
+      `<div class="skill-group" data-reveal><p class="mono">${String(i + 1).padStart(2, '0')}</p><h3>${escapeHTML(group.group)}</h3><ul>${group.items
+        .map((item) => `<li>${escapeHTML(item)}</li>`)
+        .join('')}</ul></div>`,
   )
   .join('');
+$('#tool-wall').innerHTML = tools
+  .map(
+    ([id, name]) =>
+      `<li tabindex="0" aria-label="${escapeHTML(name)}"><svg aria-hidden="true"><use href="images/tool-logos.svg#logo-${id}"></use></svg><span aria-hidden="true">${escapeHTML(name)}</span></li>`,
+  )
+  .join('');
+$('#service-list').innerHTML = service
+  .map(
+    (s) =>
+      `<li data-reveal><p class="kind mono">${escapeHTML(s.kind)}</p><div><h3>${escapeHTML(s.title)}</h3><p class="org">${escapeHTML(s.org)}</p><p class="text">${escapeHTML(s.text)}</p></div><p class="when mono">${escapeHTML(s.when)}</p></li>`,
+  )
+  .join('');
+// Late-rendered blocks join the reveal observer.
 {
-  const items = $$('#credential-list li');
+  const late = $$('#skills-grid [data-reveal], #service-list [data-reveal]');
   if (reduceMotion.matches || !('IntersectionObserver' in window))
-    items.forEach((li) => li.classList.add('in'));
+    late.forEach((el) => el.classList.add('in'));
   else {
     const io = new IntersectionObserver(
-      (entries) =>
-        entries.forEach((entry, i) => {
+      (entries) => {
+        entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
-          entry.target.style.transitionDelay = `${items.indexOf(entry.target) * 0.12}s`;
+          const siblings = $$('[data-reveal]', entry.target.parentElement);
+          entry.target.style.transitionDelay = `${Math.min(siblings.indexOf(entry.target), 6) * 0.07}s`;
           entry.target.classList.add('in');
           io.unobserve(entry.target);
-        }),
-      { threshold: 0.4 },
+        });
+      },
+      { rootMargin: '0px 0px -8% 0px', threshold: 0.1 },
     );
-    items.forEach((li) => io.observe(li));
+    late.forEach((el) => io.observe(el));
   }
 }
 
@@ -447,6 +588,7 @@ $$('[data-project]').forEach((button) =>
       `<a class="button button-primary" href="${project.link}" ${project.link.startsWith('https:') ? 'target="_blank" rel="noopener"' : ''}>${escapeHTML(project.linkLabel)}</a>` +
       `<p class="detail-source">${escapeHTML(project.source)}</p>`;
     dialog.showModal();
+    lenis?.stop();
     document.body.style.overflow = 'hidden';
   }),
 );
@@ -463,10 +605,16 @@ $$('[data-project]').forEach((button) =>
       )
         d.close();
     }
-    if (event.target.closest('a[href^="#"]')) d.close();
+    const anchor = event.target.closest('a[href^="#"]');
+    if (anchor) {
+      event.preventDefault();
+      d.close();
+      setTimeout(() => scrollToTarget(anchor.getAttribute('href')), 60);
+    }
   });
   d.addEventListener('close', () => {
     document.body.style.overflow = '';
+    lenis?.start();
     (d === dialog ? dialogOpener : photoOpener)?.focus({ preventScroll: true });
   });
 });

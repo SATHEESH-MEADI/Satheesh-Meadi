@@ -8,7 +8,9 @@ import {
   projects,
   tripPhoto,
   gallery,
-  credentials,
+  service,
+  skills,
+  tools,
 } from '../scripts/content.js';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
@@ -125,9 +127,9 @@ for (const trip of trips) {
   }
 }
 for (const item of gallery) {
-  assert.ok(['wide', 'tall', 'square'].includes(item.size), 'Gallery tile size');
+  assert.ok(['wide', 'tall'].includes(item.size), 'Gallery tile size');
   assert.ok(item.alt && item.caption, 'Gallery items carry alt text and a caption');
-  for (const width of [768, 1280, 1920]) {
+  for (const width of [768, 1280, 1920, 2576]) {
     for (const ext of ['webp', 'avif']) {
       const asset = `images/field/${item.file}-${width}.${ext}`;
       await access(resolve(root, asset));
@@ -142,7 +144,13 @@ for (const item of gallery) {
     'No producer names in gallery',
   );
 }
-assert.ok(credentials.length >= 4, 'Credentials listed');
+assert.equal(gallery.length, 3, 'Three distinct photographs in the gallery');
+assert.equal(new Set(gallery.map((g) => g.file)).size, 3, 'No repeated gallery photograph');
+assert.ok(service.length >= 5, 'Memberships, service and activities listed');
+assert.ok(skills.length >= 6 && skills.every((g) => g.items.length >= 3), 'Skill groups populated');
+const sprite = await readFile(resolve(root, 'images/tool-logos.svg'), 'utf8');
+for (const [id] of tools) assert.ok(sprite.includes(`id="logo-${id}"`), `Logo sprite has ${id}`);
+assert.ok(!/Irrigation Research Laboratory/.test(html + content), 'Lab is named RISE Lab');
 for (const entry of manifest) {
   await access(resolve(root, entry.asset));
   assert.match(entry.source_sha256, /^[a-f0-9]{64}$/);
@@ -154,5 +162,5 @@ for (const file of [
 ])
   await access(resolve(root, file));
 console.log(
-  `PASS: links, images and srcsets, preserved anchors, no em dashes, ${dateCount} travel dates / ${visitCount} site visits, regional counts, seven season frames, gallery provenance, fonts and vendor files.`,
+  `PASS: links, images and srcsets, preserved anchors, no em dashes, ${dateCount} travel dates / ${visitCount} site visits, regional counts, seven season frames, gallery of three, skills, service, logo sprite, fonts and vendor files.`,
 );

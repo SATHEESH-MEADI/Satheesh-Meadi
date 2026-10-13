@@ -157,59 +157,174 @@ export const regionNames = { caddo: 'Caddo', altus: 'Altus', panhandle: 'Panhand
 // Photographs supplied directly by Satheesh for the gallery (see docs/asset-provenance.json).
 export const gallery = [
   {
-    file: 'cotton-thumbs-up',
-    alt: 'Satheesh giving a thumbs up in a cotton field with open bolls, beside a variety sign',
-    caption: 'Cotton at harvest stage',
-    size: 'wide',
-  },
-  {
     file: 'cotton-sensor-work',
-    alt: 'Satheesh checking a soil-moisture sensor station among open cotton bolls',
-    caption: 'Checking the sensor station',
+    alt: 'Satheesh pulling a soil-moisture sensor at a station among open cotton bolls',
+    caption: 'Pulling a sensor at the end of the season',
     size: 'tall',
     position: '24% 50%',
   },
   {
-    file: 'team-corn-pivot-1',
-    alt: 'Field team selfie beside a rain gauge in harvested corn, with a center pivot behind',
-    caption: 'The team, after a corn-field check',
-    size: 'square',
-    position: '50% 62%',
-  },
-  {
-    file: 'cotton-field-wide',
-    alt: 'Satheesh standing in rows of defoliated cotton under an overcast sky',
-    caption: 'Rows ready for the picker',
+    file: 'cotton-thumbs-up',
+    alt: 'Satheesh giving a thumbs up in a cotton field with open bolls, beside a variety sign',
+    caption: 'Cotton at harvest stage',
     size: 'wide',
+    position: '50% 58%',
   },
   {
-    file: 'cotton-pointing',
-    alt: 'Satheesh pointing at himself in a cotton field beside a variety sign',
-    caption: 'Field day, cotton site',
-    size: 'square',
-  },
-  {
-    file: 'team-corn-pivot-2',
-    alt: 'Field team standing in corn stubble near a rain gauge and data logger',
-    caption: 'Rain gauge and logger, still reporting',
-    size: 'square',
+    file: 'team-corn-pivot-1',
+    alt: 'Field team beside a rain gauge in harvested corn, with a center pivot behind',
+    caption: 'The team, after a corn-field check',
+    size: 'wide',
+    position: '50% 62%',
   },
 ];
 
-export const credentials = [
-  { title: 'IEEE', detail: 'Institute of Electrical and Electronics Engineers', mono: 'MEMBER' },
+// Memberships, service and activities, as stated by Satheesh (October 2026) and in the CV.
+export const service = [
   {
+    kind: 'Leadership',
+    title: 'Social Chair, BAE Graduate Student Association',
+    org: 'Biosystems and Agricultural Engineering, Oklahoma State University',
+    when: 'Aug 2026 - present',
+    text: 'Elected officer of the department’s graduate student association, organising social events that bring the BAE graduate community together.',
+  },
+  {
+    kind: 'Service',
+    title: 'Doctoral Admissions Interview Panel',
+    org: 'Biosystems and Agricultural Engineering, Oklahoma State University',
+    when: '2026',
+    text: 'Interviewed prospective doctoral students applying to the graduate program.',
+  },
+  {
+    kind: 'Membership',
+    title: 'IEEE',
+    org: 'Institute of Electrical and Electronics Engineers',
+    when: 'Member',
+    text: 'Presented at the 2026 IEEE Dallas Circuits and Systems Conference.',
+  },
+  {
+    kind: 'Membership',
     title: 'ASABE',
-    detail: 'American Society of Agricultural and Biological Engineers',
-    mono: 'MEMBER',
+    org: 'American Society of Agricultural and Biological Engineers',
+    when: 'Member',
+    text: 'Five oral contributions at the 2026 ASABE Annual International Meeting, Indianapolis.',
   },
-  { title: 'FE Exam', detail: 'NCEES Fundamentals of Engineering examination', mono: 'PASSED' },
   {
-    title: 'BAE GSA',
-    detail:
-      'Social Chair, Biosystems & Agricultural Engineering Graduate Student Association, Oklahoma State University',
-    mono: 'AUG 2026 - PRESENT',
+    kind: 'Credential',
+    title: 'FE Exam, passed',
+    org: 'NCEES Fundamentals of Engineering examination',
+    when: 'Engineer in training',
+    text: 'First step toward professional engineering licensure.',
   },
+];
+
+// Skills, grouped as in the CV (July 22, 2026).
+export const skills = [
+  {
+    group: 'Agricultural and geospatial analytics',
+    items: [
+      'Google Earth Engine',
+      'OpenET',
+      'Remote sensing',
+      'Raster processing',
+      'ET and ETo',
+      'NDVI',
+      'Irrigation scheduling',
+      'Canopy temperature',
+      'Precision agriculture',
+    ],
+  },
+  {
+    group: 'Field and research methods',
+    items: [
+      'Mesonet weather data',
+      'Relative-humidity analysis',
+      'Sensor installation',
+      'Data loggers (CR1000, ZL6)',
+      'Soil-moisture probes',
+      'Infrared thermometry',
+      'Crop measurements',
+    ],
+  },
+  {
+    group: 'Machine learning and AI',
+    items: [
+      'OLS, Random Forest, LightGBM',
+      'Hugging Face',
+      'MLflow',
+      'SageMaker',
+      'spaCy and NLTK',
+      'LLMs, RAG and GenAI',
+      'Transformers',
+      'Model drift monitoring',
+    ],
+  },
+  {
+    group: 'Languages',
+    items: ['Python', 'SQL', 'Java', 'C++', 'Bash'],
+  },
+  {
+    group: 'Big data and warehousing',
+    items: [
+      'Apache Spark and PySpark',
+      'Hadoop',
+      'Kafka and Spark Streaming',
+      'Snowflake',
+      'Redshift',
+      'BigQuery',
+      'PostgreSQL',
+      'MySQL',
+      'Delta Lake',
+    ],
+  },
+  {
+    group: 'Cloud, infrastructure and observability',
+    items: [
+      'AWS (S3, EC2, Glue, Lambda)',
+      'GCP (BigQuery, Dataflow)',
+      'Azure (Data Factory, Synapse)',
+      'Docker',
+      'Kubernetes',
+      'Terraform',
+      'GitHub Actions',
+      'CloudWatch and Datadog',
+    ],
+  },
+  {
+    group: 'Visualisation',
+    items: ['Tableau', 'Power BI', 'Streamlit', 'Plotly', 'Seaborn'],
+  },
+];
+
+export const tools = [
+  ['python', 'Python'],
+  ['spark', 'Apache Spark'],
+  ['hadoop', 'Apache Hadoop'],
+  ['kafka', 'Apache Kafka'],
+  ['snowflake', 'Snowflake'],
+  ['bigquery', 'Google BigQuery'],
+  ['postgresql', 'PostgreSQL'],
+  ['mysql', 'MySQL'],
+  ['googlecloud', 'Google Cloud'],
+  ['githubactions', 'GitHub Actions'],
+  ['docker', 'Docker'],
+  ['kubernetes', 'Kubernetes'],
+  ['terraform', 'Terraform'],
+  ['streamlit', 'Streamlit'],
+  ['plotly', 'Plotly'],
+  ['huggingface', 'Hugging Face'],
+  ['mlflow', 'MLflow'],
+  ['spacy', 'spaCy'],
+  ['earthengine', 'Google Earth Engine'],
+  ['arcgis', 'ArcGIS'],
+  ['airflow', 'Apache Airflow'],
+  ['scikitlearn', 'scikit-learn'],
+  ['pytorch', 'PyTorch'],
+  ['datadog', 'Datadog'],
+  ['cplusplus', 'C++'],
+  ['bash', 'GNU Bash'],
+  ['openjdk', 'Java (OpenJDK)'],
+  ['git', 'Git'],
 ];
 
 export const projects = {

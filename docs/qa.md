@@ -35,7 +35,7 @@ Checked in the available Chromium-based in-app browser, using the local preview 
 - No Lighthouse score, scientific model re-evaluation, or independent validation of CV performance metrics is claimed.
 - External project links returned HTTP 200. The IEEE DOI returned HTTP 202. The nonresolving soil-paper DOI was replaced by the verified publisher article page. ResearchGate and LinkedIn remain external services and may require sign-in or restrict automated access.
 
-## October 12, 2026 (redesign)
+## October 12 and 13, 2026 (redesign, then the colour-journey and smooth-scroll revision)
 
 - `node tools/check_site.mjs`: passed (links, images and srcsets, preserved anchors, no em dashes, fieldwork totals, regional counts, season frames, gallery provenance, fonts and vendor files).
 - `node --check` on `scripts/main.js`, `scripts/scene.js`, `scripts/content.js`: passed.
@@ -43,3 +43,4 @@ Checked in the available Chromium-based in-app browser, using the local preview 
 - Headless Chromium at 1440, 1024 and 390 pixels: no horizontal overflow, no console errors, all images load. Hero, research story (sticky model + layer switching), trip strip, map filters, season slider, gallery lightbox, project dialogs, publication tabs, mobile menu checked.
 - Reduced-motion path: reveals, hero wipe and scroll-linked effects disabled; state changes remain visible.
 - The GitHub Pages workflow now copies `fonts/` and the local preview server serves `fonts/` and `.avif`.
+- October 13: Lenis smooth scrolling, body colour journey across sections (dark, soil, sky, cotton, canopy, orange), word-by-word headings, pinned horizontal season walk (native horizontal scroll under 801px and with reduced motion), gallery of three with parallax, skills and tool wall, memberships and service section. Re-checked at 390 and 1440 pixels with no console errors or horizontal overflow; interactions re-tested.

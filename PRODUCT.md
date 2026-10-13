@@ -2,7 +2,7 @@
 
 ## What this is
 
-The personal research portfolio and GitHub profile of Satheesh Meadi, PhD student in Biosystems and Agricultural Engineering at Oklahoma State University (Irrigation Research Laboratory). One static page, published with GitHub Pages from `main`; the README of this repository doubles as the GitHub profile.
+The personal research portfolio and GitHub profile of Satheesh Meadi, PhD student in Biosystems and Agricultural Engineering at Oklahoma State University (RISE Lab). One static page, published with GitHub Pages from `main`; the README of this repository doubles as the GitHub profile.
 
 ## Who reads it
 
@@ -10,7 +10,7 @@ Faculty, collaborators, conference contacts, recruiters and growers who met Sath
 
 ## What it must prove
 
-That he does both halves of the work: the field work (installing and maintaining sensors, visiting growers) and the modelling (canopy temperature estimation, humidity constraints, OpenET-based irrigation estimation). Evidence over claims: dated visits, real photographs, listed papers and talks.
+That he does both halves of the work: the field work (installing and maintaining sensors, visiting growers) and the modelling (canopy temperature estimation, humidity constraints, OpenET-based irrigation estimation), plus the skills and service that go with them. Evidence over claims: dated visits, real photographs, listed papers and talks.
 
 ## Brand commitments
 

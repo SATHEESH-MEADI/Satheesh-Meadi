@@ -5,7 +5,7 @@
 <p align="center">
   <strong>PhD Researcher · Data Scientist · Field Practitioner</strong><br />
   Biosystems &amp; Agricultural Engineering · Oklahoma State University<br />
-  Irrigation Research Laboratory · Stillwater, Oklahoma
+  RISE Lab · Stillwater, Oklahoma
 </p>
 
 <p align="center">
@@ -16,7 +16,7 @@
 </p>
 
 <p align="center">
-  <img src="images/field/cotton-thumbs-up-1280.webp" width="100%" alt="Satheesh Meadi standing in a cotton field at harvest stage, 2026 season" />
+  <img src="images/field/cotton-field-wide-1280.webp" width="100%" alt="Satheesh Meadi standing in rows of cotton at harvest stage, 2026 season" />
   <br /><sub>Cotton at harvest, Oklahoma, 2026 season</sub>
 </p>
 
@@ -37,13 +37,13 @@
   </tr>
 </table>
 
-## Memberships, credentials and service
+## Memberships, service and activities
 
 | | | | |
 | :--- | :--- | :--- | :--- |
-| **IEEE**<br /><sub>Member</sub> | **ASABE**<br /><sub>Member, American Society of Agricultural and Biological Engineers</sub> | **FE Exam**<br /><sub>NCEES Fundamentals of Engineering, passed</sub> | **BAE GSA Social Chair**<br /><sub>Biosystems &amp; Agricultural Engineering Graduate Student Association, OSU · Aug 2026 to present</sub> |
+| **BAE GSA Social Chair**<br /><sub>Biosystems &amp; Agricultural Engineering Graduate Student Association, OSU · Aug 2026 to present</sub> | **Doctoral Admissions Panel**<br /><sub>OSU Biosystems &amp; Agricultural Engineering · 2026</sub> | **IEEE** and **ASABE**<br /><sub>Member of both societies</sub> | **FE Exam**<br /><sub>NCEES Fundamentals of Engineering, passed</sub> |
 
-Also serving on the **Doctoral Admissions Panel**, OSU Biosystems &amp; Agricultural Engineering (2026).
+[Memberships, service and activities →](https://satheesh-meadi.github.io/Satheesh-Meadi/#service)
 
 ## What I’m working on
 
@@ -70,9 +70,9 @@ Installing sensors, checking measurements, and working with growers keep my rese
     <td align="center"><img src="images/fieldwork/panhandle-sorghum.webp" width="300" alt="Panhandle sorghum field on July 10, 2026" /><br /><strong>Panhandle</strong><br /><sub>Sorghum fieldwork · July 10</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="images/field/cotton-sensor-work-768.webp" width="300" alt="Satheesh checking a soil-moisture sensor station among open cotton bolls" /><br /><strong>Cotton at harvest</strong><br /><sub>Checking the sensor station</sub></td>
-    <td align="center"><img src="images/field/team-corn-pivot-1-768.webp" width="300" alt="Field team selfie beside a rain gauge in harvested corn, with a center pivot behind" /><br /><strong>The team</strong><br /><sub>After a corn-field check</sub></td>
-    <td align="center"><img src="images/field/cotton-field-wide-768.webp" width="300" alt="Satheesh standing in rows of defoliated cotton under an overcast sky" /><br /><strong>Rows ready for the picker</strong><br /><sub>2026 season</sub></td>
+    <td align="center"><img src="images/field/cotton-sensor-work-768.webp" width="300" alt="Satheesh pulling a soil-moisture sensor at a station among open cotton bolls" /><br /><strong>End of season</strong><br /><sub>Pulling a sensor</sub></td>
+    <td align="center"><img src="images/field/cotton-thumbs-up-768.webp" width="300" alt="Satheesh giving a thumbs up in a cotton field at harvest stage" /><br /><strong>Cotton at harvest</strong><br /><sub>Thumbs up from the rows</sub></td>
+    <td align="center"><img src="images/field/team-corn-pivot-1-768.webp" width="300" alt="Field team beside a rain gauge in harvested corn, with a center pivot behind" /><br /><strong>The team</strong><br /><sub>After a corn-field check</sub></td>
   </tr>
 </table>
 
@@ -88,11 +88,16 @@ Installing sensors, checking measurements, and working with growers keep my rese
 | **[Financial Risk Pipeline](https://github.com/SATHEESH-MEADI/Real_Time_Financial_Risk_Dashboard)** | Market-data ingestion, CAPM analytics, and portfolio dashboards. | Airflow · Snowflake · PostgreSQL |
 | **[Dribble, Predict, Win](https://github.com/SATHEESH-MEADI/NBA-Game-Forecast)** | Basketball outcome forecasting with data pipelines and model drift monitoring. | PySpark · Machine learning |
 
-## My working toolkit
+## Skills
 
-**Research & geospatial** &nbsp; Python · Google Earth Engine · OpenET · Environmental data<br />
-**Models & language** &nbsp; Machine learning · LightGBM · Hugging Face · NLP<br />
-**Data & systems** &nbsp; SQL · PySpark · Airflow · PostgreSQL · Snowflake · Cloud platforms
+**Agricultural & geospatial** &nbsp; Google Earth Engine · OpenET · Remote sensing · Raster processing · ET/ETo · NDVI · Irrigation scheduling · Canopy temperature<br />
+**Field & research methods** &nbsp; Mesonet weather data · Sensor installation · Data loggers · Soil-moisture probes · Infrared thermometry<br />
+**Machine learning & AI** &nbsp; OLS · Random Forest · LightGBM · Hugging Face · MLflow · SageMaker · spaCy · LLMs, RAG and GenAI<br />
+**Languages & data** &nbsp; Python · SQL · Java · C++ · Bash · Spark and PySpark · Hadoop · Kafka · Snowflake · Redshift · BigQuery · PostgreSQL<br />
+**Cloud & infrastructure** &nbsp; AWS · GCP · Azure · Docker · Kubernetes · Terraform · GitHub Actions · CloudWatch and Datadog<br />
+**Visualisation** &nbsp; Tableau · Power BI · Streamlit · Plotly · Seaborn
+
+[The full skills section →](https://satheesh-meadi.github.io/Satheesh-Meadi/#skills)
 
 ## The path so far
 
