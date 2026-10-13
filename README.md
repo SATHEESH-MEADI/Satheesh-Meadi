@@ -131,9 +131,3 @@ Six oral conference contributions in 2026, including five at the ASABE Annual In
   &nbsp; · &nbsp; <a href="https://satheesh-meadi.github.io/Satheesh-Meadi/">Visit my portfolio</a>
   &nbsp; · &nbsp; <a href="https://www.linkedin.com/in/satheesh-meadi/">Find me on LinkedIn</a>
 </p>
-
-<details>
-<summary><sub>About this repository</sub></summary>
-
-<sub>This repository is both my GitHub profile and the source of my portfolio website, published with GitHub Pages from <code>main</code>. Run <code>npm start</code> for a local preview and <code>npm run check</code> to validate links, images, fieldwork counts and provenance. Design decisions live in <code>DESIGN.md</code>; content sources are documented in <code>docs/content-provenance.md</code>.</sub>
-</details>
